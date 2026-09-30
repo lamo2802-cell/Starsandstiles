@@ -137,3 +137,9 @@ nav.site.scrolled .wrap{padding-top:.6rem;padding-bottom:.6rem}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .js .reveal{opacity:1;transform:none}
 }
+
+/* showcase thumbnails with photos */
+.show .thumb{overflow:hidden}
+.show .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.show:hover .thumb img{transform:scale(1.07)}
+.show .thumb .live{z-index:2}

@@ -76,12 +76,12 @@ def page(fname, title, desc, body):
 
 # ---------- HOME ----------
 page("index.html", "Stars & Stiles | Direct booking websites for holiday let owners",
-     "We build and manage direct booking websites for UK holiday let owners, and keep you informed of changing regulations. Built by holiday let owners.",
+     "We build direct booking websites for UK holiday let owners, then manage them for you or hand them over, and keep you informed of changing regulations. Built by holiday let owners.",
      """
 <header class="hero"><span class="shoot"></span><span class="shoot s2"></span><div class="wrap">
 <p class="eyebrow">Direct booking websites for holiday let owners</p>
 <h1>Your cottage. Your website.<br>Your bookings.</h1>
-<p class="lead">We build and run a beautiful direct booking site for your holiday let, so more guests book with you instead of paying a platform. And as an optional extra, we keep you informed as the rules for holiday lets change.</p>
+<p class="lead">We build a beautiful direct booking site for your holiday let, so more guests book with you instead of paying a platform. We can look after it for you, or hand it over once it&rsquo;s live. Your choice. And as an optional extra, we keep you informed as the rules for holiday lets change.</p>
 <a class="btn" href="contact.html">Talk to us</a><a class="btn ghost" href="showcase.html">See example sites</a>
 </div></header>
 
@@ -97,8 +97,8 @@ page("index.html", "Stars & Stiles | Direct booking websites for holiday let own
 
 <section class="block alt"><div class="wrap">
 <div class="section-head"><p class="eyebrow" style="color:var(--gold-dark)">The core service</p>
-<h2>A complete booking website, built and managed for you</h2>
-<p>Not a template you have to figure out. We design it around your property, set it all up, and look after it.</p></div>
+<h2>A complete booking website, built around your property</h2>
+<p>Not a template you have to figure out. We design it around your property and set it all up. After launch, we can manage it for you, or hand it over to run yourself.</p></div>
 <div class="grid g2">
 <div class="card"><h3>What guests get</h3><ul class="ticks">
 <li>A fast, mobile-friendly site that shows off your property</li>
@@ -111,7 +111,7 @@ page("index.html", "Stars & Stiles | Direct booking websites for holiday let own
 <li>Calendar sync in and out with Airbnb and Booking.com</li>
 <li>Booking notifications straight to your inbox</li>
 <li>Cleaner logins and changeover checklists, if you want them</li>
-<li>Hosting, updates and support handled by us</li></ul></div>
+<li>Hosting, updates and support by us, or a full hand-over, as you prefer</li></ul></div>
 </div></div></section>
 
 <section class="block dark"><div class="wrap">
@@ -132,7 +132,7 @@ page("index.html", "Stars & Stiles | Direct booking websites for holiday let own
 <div class="step"><h3>Chat</h3><p>Tell us about your property, your current listings and how you want to run bookings.</p></div>
 <div class="step"><h3>Design</h3><p>We build a site around your photos and personality. See our examples for the range of styles.</p></div>
 <div class="step"><h3>Connect</h3><p>We link your calendars, payments and emails, and test the whole booking journey.</p></div>
-<div class="step"><h3>Launch &amp; look after</h3><p>Your site goes live on your own domain, and we keep it running, updated and supported.</p></div>
+<div class="step"><h3>Launch &amp; hand over</h3><p>Your site goes live on your own domain. Then you choose: we keep managing it, or we hand it over to you.</p></div>
 </div></div></section>
 
 <section class="block alt"><div class="wrap">
@@ -153,7 +153,7 @@ page("index.html", "Stars & Stiles | Direct booking websites for holiday let own
 
 # ---------- SERVICES ----------
 page("services.html", "What we do | Stars & Stiles",
-     "Direct booking website build and management for holiday lets, plus an optional Compliance Watch regulation update service.",
+     "Direct booking websites for holiday lets, managed by us or handed over to you, plus an optional Compliance Watch regulation update service.",
      """
 <header class="hero" style="padding:4.5rem 0 3.5rem"><div class="wrap">
 <p class="eyebrow">What we do</p><h1>Two services, one goal</h1>
@@ -162,7 +162,7 @@ page("services.html", "What we do | Stars & Stiles",
 <section class="block"><div class="wrap">
 <div class="grid g2">
 <div class="card"><span class="tag">Core service</span><h2 style="font-size:1.8rem">Direct Booking Site</h2>
-<p>We design, build, host and manage your holiday let website.</p>
+<p>We design and build your holiday let website, then either manage it for you or hand it over.</p>
 <ul class="ticks">
 <li>Bespoke design around your property and brand</li>
 <li>Availability calendar with Airbnb and Booking.com sync</li>
@@ -171,7 +171,8 @@ page("services.html", "What we do | Stars & Stiles",
 <li>Automated guest emails: confirmation, reminders, receipts</li>
 <li>Owner admin area for prices and bookings</li>
 <li>Guest info page, house guide and terms</li>
-<li>Your own domain, hosting, security updates and support</li></ul></div>
+<li>Your own domain, set up in your name</li>
+<li>Hosting, security updates and support, if you choose us to manage it</li></ul></div>
 <div class="card"><span class="tag green">Optional add-on</span><h2 style="font-size:1.8rem">Compliance Watch</h2>
 <p>Regulation updates and website changes to go with them.</p>
 <ul class="ticks">
@@ -185,14 +186,25 @@ page("services.html", "What we do | Stars & Stiles",
 </div></div></section>
 
 <section class="block alt"><div class="wrap">
+<div class="section-head"><h2>Two ways to run your site</h2>
+<p>Every site is built the same way. What happens after launch is up to you, and you can switch later.</p></div>
+<div class="grid g2">
+<div class="card"><span class="tag">Option 1</span><h3>We manage it</h3><p>We keep the site hosted, secure and up to date, update prices and content when you ask, and look after the technical side, so you can get on with welcoming guests.</p>
+<ul class="ticks"><li>Hosting, security and updates included</li><li>Changes made for you</li><li>Support when something needs fixing</li></ul></div>
+<div class="card"><span class="tag green">Option 2</span><h3>We build it, you run it</h3><p>We design and build the site, set everything up in your own accounts, show you how it all works, and hand it over. It is yours to manage.</p>
+<ul class="ticks"><li>Domain, hosting and accounts in your name</li><li>A walkthrough of how to run it day to day</li><li>Optional support or Compliance Watch, whenever you want it</li></ul></div>
+</div></div></section>
+
+<section class="block"><div class="wrap">
 <div class="section-head"><h2>At a glance</h2></div>
 <div class="tablewrap"><table class="cmp">
 <tr><th></th><th>Direct Booking Site</th><th>+ Compliance Watch</th></tr>
-<tr><td>Website design, build &amp; hosting</td><td>Included</td><td>Included</td></tr>
+<tr><td>Website design &amp; build</td><td>Included</td><td>Included</td></tr>
+<tr><td>Ongoing management</td><td>Your choice: we manage it, or we hand it over</td><td>Works with either option</td></tr>
 <tr><td>Booking, payments &amp; guest emails</td><td>Included</td><td>Included</td></tr>
 <tr><td>Airbnb / Booking.com calendar sync</td><td>Included</td><td>Included</td></tr>
 <tr><td>Regulation updates by email</td><td>&ndash;</td><td>Included</td></tr>
-<tr><td>Rule-driven website updates</td><td>Quoted as needed</td><td>Included where the change affects your site</td></tr>
+<tr><td>Rule-driven website updates</td><td>Quoted as needed</td><td>Included where the change affects your site (if we manage it, or by arrangement if you run it)</td></tr>
 <tr><td>Owner compliance checklist</td><td>&ndash;</td><td>Included</td></tr>
 </table></div>
 <p style="margin-top:1.2rem;color:var(--muted);font-size:.93rem">Pricing depends on your property and how you want to run it, so we quote for each owner. Get in touch and we will give you a clear figure with no surprises.</p>
@@ -254,11 +266,11 @@ page("compliance.html", "Compliance Watch | Stars & Stiles",
 
 # ---------- SHOWCASE ----------
 page("showcase.html", "Showcase | Stars & Stiles",
-     "See a live holiday let site we run, plus three fictional example sites showing different designs.",
+     "See a live holiday let site we run, plus more example sites showing different designs.",
      """
 <header class="hero" style="padding:4.5rem 0 3.5rem"><div class="wrap">
 <p class="eyebrow">Showcase</p><h1>Every property is different</h1>
-<p class="lead">One live site we run ourselves, and three fictional examples showing how the look and feel can change while the booking engine underneath stays reliable.</p></div></header>
+<p class="lead">One live site we run ourselves, and more examples showing how the look and feel can change while the booking engine underneath stays reliable.</p></div></header>
 
 <section class="block"><div class="wrap">
 <div class="section-head"><h2>Live site</h2></div>
@@ -270,15 +282,15 @@ page("showcase.html", "Showcase | Stars & Stiles",
 </div></section>
 
 <section class="block alt"><div class="wrap">
-<div class="section-head"><h2>Example designs</h2>
-<p>These properties and their names are entirely fictional, made to show different styles. Availability, prices and bookings on them are demonstrations only.</p></div>
+<div class="section-head"><h2>Other examples</h2>
+<p>Each site we build is unique to its property, with its own look, feel and personality. These examples show the range, from bright and coastal to dark and dramatic to clean and contemporary.</p></div>
 <div class="showcase">
-<a class="show" href="demos/seaside/"><div class="thumb" style="background:linear-gradient(180deg,#bfe4f2 0,#eaf6fa 55%,#f4dfb4 55%,#e8cf98 75%,#3f9cc0 75%,#2b7fa3 100%)"><span class="live ex">Example</span></div>
-<div class="body"><h3>The Old Lifeboat House</h3><p>Coastal, bright and airy. A fictional seaside cottage on the Cornish coast for families and dogs.</p><span class="more">View example &rarr;</span></div></a>
-<a class="show" href="demos/highland/"><div class="thumb" style="background:linear-gradient(180deg,#0e1420 0,#26324a 55%,#3a3020 55%,#1a1712 100%)"><span class="live ex">Example</span></div>
-<div class="body"><h3>Corrie Bothy</h3><p>Dark, moody and atmospheric. A fictional Highland hideaway for couples, with a hot tub and dark skies.</p><span class="more">View example &rarr;</span></div></a>
-<a class="show" href="demos/barn/"><div class="thumb" style="background:linear-gradient(180deg,#f0ebe0 0,#f0ebe0 60%,#c9a66b 60%,#c9a66b 100%)"><span class="live ex">Example</span></div>
-<div class="body"><h3>Thorn Barn</h3><p>Clean, contemporary and editorial. A fictional converted barn in the Cotswolds for groups and celebrations.</p><span class="more">View example &rarr;</span></div></a>
+<a class="show" href="demos/seaside/"><div class="thumb" style="background:linear-gradient(180deg,#bfe4f2 0,#eaf6fa 55%,#f4dfb4 55%,#e8cf98 75%,#3f9cc0 75%,#2b7fa3 100%)"><img src="https://images.unsplash.com/photo-1510069551606-f9ec0a62fe28?auto=format&fit=crop&q=75&w=900" alt="White house beside the sea" loading="lazy" onerror="this.remove()"><span class="live ex">Example</span></div>
+<div class="body"><h3>The Old Lifeboat House</h3><p>Coastal, bright and airy. A seaside cottage on the Cornish coast for families and dogs.</p><span class="more">View example &rarr;</span></div></a>
+<a class="show" href="demos/highland/"><div class="thumb" style="background:linear-gradient(180deg,#0e1420 0,#26324a 55%,#3a3020 55%,#1a1712 100%)"><img src="https://images.unsplash.com/photo-1773057679427-3aa69c2369e2?auto=format&fit=crop&q=75&w=900" alt="Small white house in a misty Scottish glen" loading="lazy" onerror="this.remove()"><span class="live ex">Example</span></div>
+<div class="body"><h3>Corrie Bothy</h3><p>Dark, moody and atmospheric. A Highland hideaway for couples, with a hot tub and dark skies.</p><span class="more">View example &rarr;</span></div></a>
+<a class="show" href="demos/barn/"><div class="thumb" style="background:linear-gradient(180deg,#f0ebe0 0,#f0ebe0 60%,#c9a66b 60%,#c9a66b 100%)"><img src="https://images.unsplash.com/photo-1766854766161-86ca70a0f245?auto=format&fit=crop&q=75&w=900" alt="Barn interior with exposed beams" loading="lazy" onerror="this.remove()"><span class="live ex">Example</span></div>
+<div class="body"><h3>Thorn Barn</h3><p>Clean, contemporary and editorial. A converted barn in the Cotswolds for groups and celebrations.</p><span class="more">View example &rarr;</span></div></a>
 </div></div></section>
 
 <section class="block"><div class="wrap narrow" style="text-align:center">
