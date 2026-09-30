@@ -104,7 +104,7 @@ page("index.html", "Stars & Stiles | Direct booking websites for holiday let own
 <li>A fast, mobile-friendly site that shows off your property</li>
 <li>Live availability and instant price quotes</li>
 <li>Secure card payment, with a deposit and balance option</li>
-<li>Automatic booking confirmations and balance reminders</li>
+<li>Automated guest communications: booking confirmations, payment reminders, check-in and check-out emails</li>
 <li>A guest information page for arrival details and house guide</li></ul></div>
 <div class="card"><h3>What you get</h3><ul class="ticks">
 <li>A simple owner login to manage prices and bookings</li>
@@ -168,7 +168,7 @@ page("services.html", "What we do | Stars & Stiles",
 <li>Availability calendar with Airbnb and Booking.com sync</li>
 <li>Instant quotes with seasonal and minimum-stay pricing</li>
 <li>Secure payments with deposits and balance collection</li>
-<li>Automated guest emails: confirmation, reminders, receipts</li>
+<li>Automated guest communications: booking confirmation, payment reminders and receipts, check-in details before arrival, check-out reminders on departure day</li>
 <li>Owner admin area for prices and bookings</li>
 <li>Guest info page, house guide and terms</li>
 <li>Your own domain, set up in your name</li>
@@ -201,7 +201,7 @@ page("services.html", "What we do | Stars & Stiles",
 <tr><th></th><th>Direct Booking Site</th><th>+ Compliance Watch</th></tr>
 <tr><td>Website design &amp; build</td><td>Included</td><td>Included</td></tr>
 <tr><td>Ongoing management</td><td>Your choice: we manage it, or we hand it over</td><td>Works with either option</td></tr>
-<tr><td>Booking, payments &amp; guest emails</td><td>Included</td><td>Included</td></tr>
+<tr><td>Booking, payments &amp; automated guest communications (check-in and check-out emails and more)</td><td>Included</td><td>Included</td></tr>
 <tr><td>Airbnb / Booking.com calendar sync</td><td>Included</td><td>Included</td></tr>
 <tr><td>Regulation updates by email</td><td>&ndash;</td><td>Included</td></tr>
 <tr><td>Rule-driven website updates</td><td>Quoted as needed</td><td>Included where the change affects your site (if we manage it, or by arrangement if you run it)</td></tr>
