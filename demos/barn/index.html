@@ -11,35 +11,36 @@
 <link rel="stylesheet" href="../widget.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--paper:#f4f0e8;--ink:#1f1d1a;--clay:#b5714a;--oat:#c9a66b;--line:#d9d2c3;--muted:#6d675c;
- --w-bg:#fff;--w-ink:var(--ink);--w-line:var(--line);--w-acc:var(--ink);--w-acc-ink:#fff;--w-acc-soft:#ede6d6;--w-r:0;--w-font:'Work Sans',sans-serif}
+:root{--paper:#ffffff;--ink:#10201a;--forest:#12372a;--clay:#c4401d;--oat:#f2b632;--line:#dce6df;--muted:#55645b;--sage:#e6efe8;
+ --w-bg:#fff;--w-ink:var(--ink);--w-line:var(--line);--w-acc:var(--forest);--w-acc-ink:#fff;--w-acc-soft:#dcebe1;--w-r:0;--w-font:'Work Sans',sans-serif}
 body{font-family:'Work Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-weight:300}
 h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400}
 a{color:var(--clay)}
-header.top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:1.4rem 5%;border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:100}
+.big::before{content:"\201C";display:block;font-size:6rem;line-height:.6;color:var(--oat);height:3rem}
+header.top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:1.4rem 5%;border-bottom:3px solid var(--oat);background:var(--paper);position:sticky;top:0;z-index:100}
 .brand{grid-column:2;font-family:'DM Serif Display',serif;font-size:1.7rem;text-decoration:none;color:var(--ink)}
 header nav{display:flex;gap:1.6rem;grid-column:3;justify-content:flex-end}
 header nav a{font-size:.8rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
-header nav a.book{border:1px solid var(--ink);padding:.4rem 1rem}
-header nav a.book:hover{background:var(--ink);color:#fff}
+header nav a.book{background:var(--forest);color:#fff;padding:.5rem 1.1rem}
+header nav a.book:hover{background:var(--clay)}
 @media(max-width:700px){header.top{grid-template-columns:1fr}.brand{grid-column:1;text-align:center}header nav{grid-column:1;justify-content:center;margin-top:.6rem;flex-wrap:wrap}}
 .hero{display:grid;grid-template-columns:1.1fr 1fr;min-height:82vh}
 @media(max-width:860px){.hero{grid-template-columns:1fr}}
-.hero .txt{padding:6rem 8% 4rem;display:flex;flex-direction:column;justify-content:center}
-.hero small{font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;color:var(--clay);font-weight:500}
+.hero .txt{padding:6rem 8% 4rem;display:flex;flex-direction:column;justify-content:center;background:var(--forest);color:#fff}
+.hero small{font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;color:var(--oat);font-weight:500}
 .hero h1{font-size:clamp(3rem,7vw,6rem);line-height:1;margin:1rem 0 1.4rem}
-.hero p{font-size:1.15rem;color:var(--muted);max-width:460px}
+.hero p{font-size:1.15rem;color:#cfe0d5;max-width:460px}
 .hero .cta{margin-top:2rem;display:flex;gap:1.4rem;align-items:center}
-.btn{background:var(--ink);color:#fff;padding:1rem 2rem;text-decoration:none;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+.btn{background:var(--oat);color:var(--ink);padding:1rem 2rem;text-decoration:none;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
 .hero .art{background:var(--oat);position:relative;min-height:340px;overflow:hidden}
 .hero .art svg{position:absolute;inset:0;width:100%;height:100%}
 .hero .art .ph{animation:kb 26s ease-in-out infinite alternate}@keyframes kb{from{transform:scale(1)}to{transform:scale(1.07)}}
 .hero .txt>*{animation:up 1s cubic-bezier(.2,.7,.2,1) both}.hero .txt>*:nth-child(2){animation-delay:.12s}.hero .txt>*:nth-child(3){animation-delay:.24s}.hero .txt>*:nth-child(4){animation-delay:.36s}@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}.gal .tile{aspect-ratio:3/4;margin:0}.gal .tile:nth-child(2n){margin-top:2rem}@media(max-width:860px){.gal{grid-template-columns:1fr 1fr}}.gal .tile svg{height:100%}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.stats div{padding:2rem 1.5rem;border-right:1px solid var(--line);text-align:center}
+.stats{background:var(--oat);display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.stats div{padding:2rem 1.5rem;border-right:1px solid rgba(16,32,26,.18);text-align:center}
 .stats b{font-family:'DM Serif Display',serif;font-size:2.4rem;font-weight:400;display:block}
-.stats span{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.stats span{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);font-weight:500}
 section{padding:6rem 5%}
 .in{max-width:1180px;margin:auto}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
@@ -47,12 +48,12 @@ section{padding:6rem 5%}
 section h2{font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.1;margin-bottom:1.4rem}
 .no{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--clay);font-weight:500;margin-bottom:1rem}
 .rooms{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);margin-top:1rem;border:1px solid var(--line)}
-.rooms div{background:var(--paper);padding:1.5rem}
+.rooms div{background:var(--sage);padding:1.5rem}
 .rooms h3{font-size:1.25rem}
 .rooms p{font-size:.9rem;color:var(--muted)}
-.dark{background:var(--ink);color:#f0ebe0}
+.dark{background:var(--forest);color:#e8f1ea}
 .dark .no{color:var(--oat)}
-.dark li{list-style:none;padding:.9rem 0;border-bottom:1px solid #3a3731;display:flex;gap:1rem}
+.dark li{list-style:none;padding:.9rem 0;border-bottom:1px solid #2f5a49;display:flex;gap:1rem}
 .dark li::before{content:"—";color:var(--oat)}
 .big{font-family:'DM Serif Display',serif;font-size:clamp(1.6rem,3.2vw,2.5rem);line-height:1.3;max-width:900px}
 .big cite{display:block;margin-top:1.2rem;font-family:'Work Sans';font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-style:normal}
@@ -66,7 +67,7 @@ footer{padding:2.5rem 5%;text-align:center;font-size:.85rem;color:var(--muted);b
 
 <div class="hero">
 <div class="txt"><small>The Cotswolds &middot; Gloucestershire</small><h1>Space for<br>everyone.</h1><p>A beautifully converted barn with room for ten, a table for twelve and a garden made for long weekends.</p><div class="cta"><a class="btn" href="#book">Check dates</a></div></div>
-<div class="art"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="500" fill="#c9a66b"/><rect x="60" y="150" width="280" height="260" fill="#f4f0e8"/><path d="M40 152 L200 50 L360 152Z" fill="#1f1d1a"/><rect x="90" y="200" width="70" height="210" fill="#1f1d1a"/><rect x="185" y="200" width="70" height="110" fill="#b5714a"/><rect x="275" y="200" width="45" height="110" fill="#b5714a"/><rect x="0" y="410" width="400" height="90" fill="#8c6a3e"/><g fill="#4d7a5a"><circle cx="40" cy="400" r="26"/><circle cx="362" cy="404" r="30"/></g></svg><img class="ph" src="https://images.unsplash.com/photo-1766854766161-86ca70a0f245?auto=format&fit=crop&q=75&w=1200" alt="Interior of an old barn with exposed beams" loading="lazy" onerror="this.remove()"></div>
+<div class="art"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="500" fill="#f2b632"/><rect x="60" y="150" width="280" height="260" fill="#ffffff"/><path d="M40 152 L200 50 L360 152Z" fill="#1f1d1a"/><rect x="90" y="200" width="70" height="210" fill="#1f1d1a"/><rect x="185" y="200" width="70" height="110" fill="#e4572e"/><rect x="275" y="200" width="45" height="110" fill="#e4572e"/><rect x="0" y="410" width="400" height="90" fill="#12372a"/><g fill="#2f7d57"><circle cx="40" cy="400" r="26"/><circle cx="362" cy="404" r="30"/></g></svg><img class="ph" src="https://images.unsplash.com/photo-1766854766161-86ca70a0f245?auto=format&fit=crop&q=75&w=1200" alt="Interior of an old barn with exposed beams" loading="lazy" onerror="this.remove()"></div>
 </div>
 <div class="stats"><div><b>10</b><span>Guests</span></div><div><b>5</b><span>Bedrooms</span></div><div><b>4</b><span>Bathrooms</span></div><div><b>2</b><span>Acres</span></div></div>
 
@@ -81,19 +82,19 @@ footer{padding:2.5rem 5%;text-align:center;font-size:.85rem;color:var(--muted);b
 
 <section style="padding-top:0"><div class="in"><p class="no rv">02 &mdash; Rooms</p><h2 class="rv">Beams, light and long tables</h2>
 <div class="gal">
-<figure class="tile rv"><svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#e9e2d2"/></svg><img class="ph" src="https://images.unsplash.com/photo-1783628500870-d5380cf2fa5e?auto=format&fit=crop&q=75&w=800" alt="Open-plan living, dining and kitchen" loading="lazy" onerror="this.remove()"><figcaption>Open-plan hall</figcaption></figure>
-<figure class="tile rv"><svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#d9c9a6"/></svg><img class="ph" src="https://images.unsplash.com/photo-1776950815445-f80f2b21fa50?auto=format&fit=crop&q=75&w=800" alt="Rustic wooden kitchen with bar and stools" loading="lazy" onerror="this.remove()"><figcaption>The kitchen</figcaption></figure>
-<figure class="tile rv"><svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#e9e2d2"/></svg><img class="ph" src="https://images.unsplash.com/photo-1766430956209-72d1c28a16ec?auto=format&fit=crop&q=75&w=800" alt="Cosy living room with loft and large window" loading="lazy" onerror="this.remove()"><figcaption>The snug</figcaption></figure>
-<figure class="tile rv"><svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#d9c9a6"/></svg><img class="ph" src="https://images.unsplash.com/photo-1784740226696-113c9054ffc3?auto=format&fit=crop&q=75&w=800" alt="Rustic lounge with wooden beams and large windows" loading="lazy" onerror="this.remove()"><figcaption>The lounge</figcaption></figure>
+<figure class="tile rv"><svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#dfe9e2"/></svg><img class="ph" src="https://images.unsplash.com/photo-1783628500870-d5380cf2fa5e?auto=format&fit=crop&q=75&w=800" alt="Open-plan living, dining and kitchen" loading="lazy" onerror="this.remove()"><figcaption>Open-plan hall</figcaption></figure>
+<figure class="tile rv"><svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#c4dbcc"/></svg><img class="ph" src="https://images.unsplash.com/photo-1776950815445-f80f2b21fa50?auto=format&fit=crop&q=75&w=800" alt="Rustic wooden kitchen with bar and stools" loading="lazy" onerror="this.remove()"><figcaption>The kitchen</figcaption></figure>
+<figure class="tile rv"><svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#dfe9e2"/></svg><img class="ph" src="https://images.unsplash.com/photo-1766430956209-72d1c28a16ec?auto=format&fit=crop&q=75&w=800" alt="Cosy living room with loft and large window" loading="lazy" onerror="this.remove()"><figcaption>The snug</figcaption></figure>
+<figure class="tile rv"><svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#c4dbcc"/></svg><img class="ph" src="https://images.unsplash.com/photo-1784740226696-113c9054ffc3?auto=format&fit=crop&q=75&w=800" alt="Rustic lounge with wooden beams and large windows" loading="lazy" onerror="this.remove()"><figcaption>The lounge</figcaption></figure>
 </div></div></section>
 
-<section id="events" class="dark"><div class="in grid"><div><p class="no">03 &mdash; Gatherings</p><h2>Made for milestones</h2><p style="color:#c8c1b0">Big birthdays, family reunions, hen weekends and quiet team retreats. The barn is set well back from neighbours and designed for groups.</p></div>
+<section id="events" class="dark"><div class="in grid"><div><p class="no">03 &mdash; Gatherings</p><h2>Made for milestones</h2><p style="color:#cfe0d5">Big birthdays, family reunions, hen weekends and quiet team retreats. The barn is set well back from neighbours and designed for groups.</p></div>
 <ul><li>Chef and catering introductions</li><li>Early check-in and late check-out on request</li><li>Baby equipment and dog beds, on request</li><li>EV charger and ample parking</li></ul></div></section>
 
-<section><div class="in"><p class="no">04 &mdash; Guests</p><p class="big">“We had 22 people across the weekend and the barn absorbed every one of them. The kitchen alone was worth the trip.”<cite>Example guest review &middot; 9.5 / 10 example score</cite></p>
+<section><div class="in"><p class="no">04 &mdash; Guests</p><p class="big">We had 22 people across the weekend and the barn absorbed every one of them. The kitchen alone was worth the trip.<cite>Example guest review &middot; 9.5 / 10 example score</cite></p>
 <p class="policy-strip">How we collect and display reviews: see our <a href="#policy">reviews policy</a>.</p></div></section>
 
-<section id="policy" style="background:#ebe5d8"><div class="in"><p class="no">05 &mdash; Good to know</p><h2>Our policies</h2><p style="color:var(--muted);max-width:640px">On a real site, your reviews policy, group booking terms, cancellation policy, privacy notice and safety information each have their own page. With Compliance Watch, we keep them current as rules change.</p></div></section>
+<section id="policy" style="background:var(--sage)"><div class="in"><p class="no">05 &mdash; Good to know</p><h2>Our policies</h2><p style="color:var(--muted);max-width:640px">On a real site, your reviews policy, group booking terms, cancellation policy, privacy notice and safety information each have their own page. With Compliance Watch, we keep them current as rules change.</p></div></section>
 
 <footer>Thorn Barn is a fictional example created by <a href="../../">Stars &amp; Stiles</a> to show a contemporary, editorial design. Photos from <a href="https://unsplash.com">Unsplash</a>.</footer>
 <script src="../demo.js"></script>
