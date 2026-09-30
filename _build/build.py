@@ -274,7 +274,7 @@ page("showcase.html", "Showcase | Stars & Stiles",
 
 <section class="block"><div class="wrap">
 <div class="section-head"><h2>Live site</h2></div>
-<a class="show" href="https://www.cringleycottage.com" target="_blank" rel="noopener" style="max-width:820px">
+<a class="show wide" href="https://www.cringleycottage.com" target="_blank" rel="noopener">
 <div class="thumb" style="background-image:url(assets/cringley-IMG_1423.jpg)"><span class="live">Live</span></div>
 <div class="body"><h3>Cringley Cottage, Yorkshire Dales</h3>
 <p>Our own dog-friendly cottage in Askrigg. Direct bookings with deposits, Airbnb and Booking.com sync, guest emails, cleaner checklists and a reviews policy. This is the site everything else is based on.</p>
