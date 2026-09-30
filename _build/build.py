@@ -92,7 +92,7 @@ page("index.html", "Stars & Stiles | Direct booking websites for holiday let own
 <div class="grid g3">
 <div class="card"><div class="icon">£</div><h3>No commission</h3><p>Direct bookings carry no booking commission. You keep what your guests pay, less only the card processing fee charged by the payment provider, a fraction of typical listing-site fees.</p></div>
 <div class="card"><div class="icon">♥</div><h3>Repeat guests</h3><p>Guests who book direct are yours to welcome back, with your own emails, offers and returning-guest experience.</p></div>
-<div class="card"><div class="icon">⚙</div><h3>No double bookings</h3><p>Your calendar syncs with Airbnb and Booking.com, so a booking on one place blocks the dates everywhere else.</p></div>
+<div class="card"><div class="icon">⚙</div><h3>No double bookings</h3><p>Your calendar syncs with Airbnb, Booking.com and other listing sites, so a booking on one place blocks the dates everywhere else.</p></div>
 </div></div></section>
 
 <section class="block alt"><div class="wrap">
@@ -108,7 +108,7 @@ page("index.html", "Stars & Stiles | Direct booking websites for holiday let own
 <li>A guest information page for arrival details and house guide</li></ul></div>
 <div class="card"><h3>What you get</h3><ul class="ticks">
 <li>A simple owner login to manage prices and bookings</li>
-<li>Calendar sync in and out with Airbnb and Booking.com</li>
+<li>Calendar sync in and out with Airbnb, Booking.com and other listing sites</li>
 <li>Booking notifications straight to your inbox</li>
 <li>Cleaner logins and changeover checklists, if you want them</li>
 <li>Hosting, updates and support by us, or a full hand-over, as you prefer</li></ul></div>
@@ -165,7 +165,7 @@ page("services.html", "What we do | Stars & Stiles",
 <p>We design and build your holiday let website, then either manage it for you or hand it over.</p>
 <ul class="ticks">
 <li>Bespoke design around your property and brand</li>
-<li>Availability calendar with Airbnb and Booking.com sync</li>
+<li>Availability calendar that syncs with Airbnb, Booking.com and other listing sites</li>
 <li>Instant quotes with seasonal and minimum-stay pricing</li>
 <li>Secure payments with deposits and balance collection</li>
 <li>Automated guest communications: booking confirmation, payment reminders and receipts, check-in details before arrival, check-out reminders on departure day</li>
@@ -202,7 +202,7 @@ page("services.html", "What we do | Stars & Stiles",
 <tr><td>Website design &amp; build</td><td>Included</td><td>Included</td></tr>
 <tr><td>Ongoing management</td><td>Your choice: we manage it, or we hand it over</td><td>Works with either option</td></tr>
 <tr><td>Booking, payments &amp; automated guest communications (check-in and check-out emails and more)</td><td>Included</td><td>Included</td></tr>
-<tr><td>Airbnb / Booking.com calendar sync</td><td>Included</td><td>Included</td></tr>
+<tr><td>Calendar sync with Airbnb, Booking.com &amp; other listing sites</td><td>Included</td><td>Included</td></tr>
 <tr><td>Regulation updates by email</td><td>&ndash;</td><td>Included</td></tr>
 <tr><td>Rule-driven website updates</td><td>Quoted as needed</td><td>Included where the change affects your site (if we manage it, or by arrangement if you run it)</td></tr>
 <tr><td>Owner compliance checklist</td><td>&ndash;</td><td>Included</td></tr>
