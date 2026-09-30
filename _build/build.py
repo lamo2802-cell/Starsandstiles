@@ -146,8 +146,8 @@ def page(fname, title, desc, body):
 
 
 # ---------- HOME ----------
-GATEPHOTO = "https://images.unsplash.com/photo-1737027883185-24b41fca2431?auto=format&fit=crop&q=75&w=1600"
-WINDOWPHOTO = "https://images.unsplash.com/photo-1770893670070-42a3c6f85133?auto=format&fit=crop&q=75&w=1200"
+GATEPHOTO = "https://images.pexels.com/photos/9017967/pexels-photo-9017967.jpeg?auto=compress&cs=tinysrgb&w=1600"
+WINDOWPHOTO = "https://images.pexels.com/photos/36246279/pexels-photo-36246279.jpeg?auto=compress&cs=tinysrgb&w=1400"
 
 def photo(url, fallback, alt, cls=""):
     return f'<img class="{cls}" src="{url}" alt="{alt}" loading="lazy" onerror="this.onerror=null;this.src=\'{fallback}\'">'
@@ -174,7 +174,7 @@ page("index.html", "Stars & Stiles | Direct booking websites for holiday let own
 <div><span class="i">{ico("shield")}</span><h3>Compliance Watch</h3><p>Plain-English updates when the rules change. An optional extra.</p></div>
 </div></div></section>
 
-<section class="story"><div class="s-photo">{photo(WINDOWPHOTO, "assets/cringley-living.jpg", "Sunlight through a cottage window")}</div>
+<section class="story"><div class="s-photo">{photo(WINDOWPHOTO, "assets/cringley-living.jpg", "Stone walls and green fields beneath Whernside in the Yorkshire Dales")}</div>
 <div class="s-panel"><div class="s-in">
 <p class="label">Built by owners</p>
 <h2>We run a holiday let too.</h2>
