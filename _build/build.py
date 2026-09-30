@@ -60,7 +60,7 @@ FOOT = f"""<footer class="site"><div class="wrap">
 <div><h4>Stars &amp; Stiles</h4><p>Direct booking websites for UK holiday let owners, with regulation updates to help you stay on top of the rules.</p></div>
 <div><h4>Explore</h4><a href="services.html">What we do</a><a href="compliance.html">Compliance Watch</a><a href="showcase.html">Showcase &amp; demos</a><a href="contact.html">Contact</a></div>
 <div><h4>See it live</h4><a href="https://www.cringleycottage.com" target="_blank" rel="noopener">Cringley Cottage</a><a href="demos/seaside/">Example: The Old Lifeboat House</a><a href="demos/highland/">Example: Corrie Bothy</a><a href="demos/barn/">Example: Thorn Barn</a></div>
-<div><h4>Legal</h4><a href="disclaimer.html">Important information</a><a href="mailto:{EMAIL}">{EMAIL}</a></div>
+<div><h4>Contact</h4><a href="disclaimer.html">Important information</a><a href="mailto:{EMAIL}">{EMAIL}</a><a href="tel:+447854075084">07854 075084</a></div>
 </div>
 <div class="fine">&copy; 2026 Stars And Stiles Ltd (Company No. 14294081). Registered in England &amp; Wales.<br>
 Our regulatory updates are general information and guidance only. They are not legal, tax or professional advice, and responsibility for compliance stays with the property owner. <a href="disclaimer.html" style="display:inline;color:var(--gold)">Read more</a>.</div>
@@ -301,30 +301,19 @@ page("showcase.html", "Showcase | Stars & Stiles",
 
 # ---------- CONTACT ----------
 page("contact.html", "Contact | Stars & Stiles",
-     "Tell us about your holiday let and how we can help with direct bookings and compliance updates.",
+     "Get in touch by email or phone to talk about a direct booking website for your holiday let.",
      f"""
 <header class="hero" style="padding:4.5rem 0 3.5rem"><div class="wrap">
 <p class="eyebrow">Get in touch</p><h1>Tell us about your holiday let</h1>
-<p class="lead">A few details and we will come back with how we could help and what it would cost.</p></div></header>
-<section class="block"><div class="wrap"><div class="grid g2">
-<form class="contact" id="f" onsubmit="return send(event)">
-<div><label for="n">Your name</label><input id="n" required></div>
-<div><label for="e">Email</label><input id="e" type="email" required></div>
-<div><label for="p">Property name and location</label><input id="p"></div>
-<div><label for="i">I&rsquo;m interested in</label><select id="i"><option>A direct booking website</option><option>A direct booking website + Compliance Watch</option><option>Compliance Watch for my existing site</option><option>Not sure yet</option></select></div>
-<div><label for="m">Anything else?</label><textarea id="m" placeholder="Number of properties, current listings, existing website..."></textarea></div>
-<button class="btn" type="submit">Send enquiry</button>
-<p style="font-size:.85rem;color:var(--muted)">This opens your email app with the details filled in, ready to send.</p>
-</form>
-<div><div class="card"><h3>Or email us directly</h3><p><a href="mailto:{EMAIL}">{EMAIL}</a></p>
-<p style="margin-top:1rem">Stars And Stiles Ltd<br>Company No. 14294081</p></div></div>
-</div></div></section>
-<script>
-function send(ev){{ev.preventDefault();
-var g=function(i){{return document.getElementById(i).value}};
-var body="Name: "+g('n')+"\\nEmail: "+g('e')+"\\nProperty: "+g('p')+"\\nInterested in: "+g('i')+"\\n\\n"+g('m');
-location.href="mailto:{EMAIL}?subject="+encodeURIComponent("Enquiry from starsandstiles.co.uk")+"&body="+encodeURIComponent(body);return false}}
-</script>
+<p class="lead">Drop us an email or give us a call and we will come back with how we could help and what it would cost.</p></div></header>
+<section class="block"><div class="wrap narrow" style="text-align:center">
+<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+<a class="btn" href="mailto:{EMAIL}?subject=Enquiry%20from%20starsandstiles.co.uk">&#9993;&nbsp; Email us</a>
+<a class="btn dark" href="tel:+447854075084">&#9742;&nbsp; Call 07854 075084</a>
+</div>
+<p style="margin-top:1.6rem;color:var(--muted)">{EMAIL}</p>
+<p style="margin-top:2.4rem;font-size:.9rem;color:var(--muted)">Stars And Stiles Ltd &middot; Company No. 14294081</p>
+</div></section>
 """)
 
 # ---------- DISCLAIMER ----------
