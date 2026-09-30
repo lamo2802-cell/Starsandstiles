@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Old Lifeboat House | Example seaside holiday let</title>
+<meta name="description" content="Example site: a fictional seaside holiday let, designed by Stars & Stiles.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232b7fa3'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../widget.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--sea:#2b7fa3;--deep:#155a7a;--sand:#f6e7c1;--foam:#eef8fb;--coral:#ef6f5e;--ink:#1c3442;
+ --w-bg:#fff;--w-ink:var(--ink);--w-line:#d8e8ee;--w-acc:var(--coral);--w-acc-soft:#fde4df;--w-r:14px;--w-font:'Nunito',sans-serif}
+body{font-family:'Nunito',sans-serif;color:var(--ink);background:var(--foam);line-height:1.65}
+h1,h2{font-family:'Pacifico',cursive;font-weight:400;color:var(--deep)}
+a{color:var(--sea)}
+header.top{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);box-shadow:0 2px 10px rgba(21,90,122,.1)}
+header.top div{max-width:1100px;margin:auto;padding:.7rem 5%;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.brand{font-family:'Pacifico',cursive;font-size:1.4rem;color:var(--deep);text-decoration:none}
+header nav{display:flex;gap:1.4rem;flex-wrap:wrap}
+header nav a{text-decoration:none;font-weight:600;color:var(--ink);font-size:.95rem}
+.pill{background:var(--coral);color:#fff!important;padding:.45rem 1.1rem;border-radius:30px}
+.hero{position:relative;height:78vh;min-height:520px;overflow:hidden;background:linear-gradient(#8fd0ea,#dff3fa 58%)}
+.hero svg{position:absolute;bottom:0;left:0;width:100%;height:100%}
+.hero .txt{position:relative;max-width:1100px;margin:auto;padding:5rem 5% 0;text-align:center}
+.hero h1{font-size:clamp(2.6rem,8vw,5.4rem);color:#fff;text-shadow:0 3px 14px rgba(21,90,122,.45)}
+.hero p{font-size:1.25rem;color:#fff;font-weight:600;text-shadow:0 2px 8px rgba(21,90,122,.5);margin-top:.5rem}
+.hero .btn{display:inline-block;margin-top:1.5rem;background:var(--coral);color:#fff;padding:.9rem 2rem;border-radius:40px;font-weight:800;text-decoration:none;box-shadow:0 6px 18px rgba(239,111,94,.4)}
+.wave{display:block;width:100%;height:60px;margin-top:-1px}
+section{padding:4rem 5%}
+.in{max-width:1100px;margin:auto}
+section h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:1rem}
+.two{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:start}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-top:1.4rem}
+.fact{background:#fff;border-radius:16px;padding:1rem;text-align:center;box-shadow:0 3px 12px rgba(21,90,122,.08)}
+.fact b{display:block;font-size:1.6rem;color:var(--sea)}
+.sand{background:var(--sand)}
+.feat{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:1.5rem}
+.feat div{background:#fff;border-radius:16px;padding:1.2rem 1.3rem;box-shadow:0 3px 12px rgba(0,0,0,.06)}
+.feat span{font-size:1.6rem}
+.feat h3{font-size:1.05rem;margin:.3rem 0}
+.gal{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:1.5rem}
+.gal svg{width:100%;border-radius:18px;display:block;box-shadow:0 4px 16px rgba(21,90,122,.15)}
+.rev{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:1.5rem}
+.rev blockquote{background:#fff;border-radius:16px;padding:1.3rem;box-shadow:0 3px 12px rgba(0,0,0,.06)}
+.rev cite{display:block;margin-top:.6rem;font-style:normal;font-weight:800;color:var(--sea);font-size:.9rem}
+.score{display:inline-block;background:var(--sea);color:#fff;border-radius:12px;padding:.3rem .8rem;font-weight:800;margin-bottom:.8rem}
+.policy-strip{font-size:.85rem;opacity:.8;margin-top:1rem}
+footer{background:var(--deep);color:#d6ecf5;text-align:center;padding:2.5rem 5%;font-size:.9rem}
+footer a{color:#fff}
+</style>
+</head>
+<body>
+<div class="demo-banner"><span>Example site &mdash; The Old Lifeboat House is a fictional property. Dates, prices and reviews are for demonstration only.</span><a href="../../showcase.html">&larr; Back to Stars &amp; Stiles</a></div>
+<header class="top"><div><a class="brand" href="#">The Old Lifeboat House</a>
+<nav><a href="#about">The house</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a class="pill" href="#book">Book direct</a></nav></div></header>
+
+<div class="hero">
+<svg viewBox="0 0 1440 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+<circle cx="1180" cy="150" r="70" fill="#fff6c9" opacity=".95"/>
+<g fill="#fff" opacity=".9"><ellipse cx="260" cy="130" rx="90" ry="22"/><ellipse cx="320" cy="115" rx="60" ry="20"/><ellipse cx="820" cy="190" rx="100" ry="22"/><ellipse cx="880" cy="172" rx="60" ry="18"/></g>
+<rect y="430" width="1440" height="270" fill="#3f9cc0"/>
+<path d="M0 470 Q90 445 180 470 T360 470 T540 470 T720 470 T900 470 T1080 470 T1260 470 T1440 470 V700H0Z" fill="#2b7fa3"/>
+<path d="M0 520 Q90 495 180 520 T360 520 T540 520 T720 520 T900 520 T1080 520 T1260 520 T1440 520 V700H0Z" fill="#256f92" opacity=".8"/>
+<path d="M0 590 Q200 540 420 590 T860 600 T1440 570 V700H0Z" fill="#f2dda6"/>
+<path d="M0 640 Q300 610 640 645 T1440 630 V700H0Z" fill="#e8cf98"/>
+<g transform="translate(360 350)"><rect x="0" y="60" width="240" height="150" fill="#fff"/><path d="M-20 62 L120 -30 L260 62Z" fill="#c9503f"/><rect x="45" y="105" width="50" height="105" fill="#2b7fa3"/><rect x="130" y="95" width="70" height="55" fill="#bfe4f2" stroke="#155a7a" stroke-width="4"/><rect x="100" y="-4" width="40" height="34" fill="#fff" stroke="#155a7a" stroke-width="3"/><path d="M0 205h240" stroke="#155a7a" stroke-width="4"/></g>
+<g transform="translate(1000 500)"><path d="M0 40 Q60 90 130 40Z" fill="#ef6f5e"/><path d="M65 40V-40L110 30Z" fill="#fff"/><path d="M65 40V-30L25 30Z" fill="#f6e7c1"/></g>
+</svg>
+<div class="txt"><h1>The Old Lifeboat House</h1><p>Sleeps 6 &middot; Dog friendly &middot; Steps from the beach</p><a class="btn" href="#book">Check availability</a></div>
+</div>
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#e8cf98"><path d="M0 30 Q90 0 180 30 T360 30 T540 30 T720 30 T900 30 T1080 30 T1260 30 T1440 30 V60H0Z" fill="#eef8fb"/></svg>
+
+<section id="about"><div class="in two">
+<div><h2>Wake up to the sound of the sea</h2>
+<p>A converted lifeboat station, this bright, sandy-toed retreat sits just above a small Cornish cove. Three bedrooms, a big open kitchen and a deck that faces the sunset make it perfect for families, friends and four-legged holidaymakers.</p>
+<div class="facts"><div class="fact"><b>6</b>guests</div><div class="fact"><b>3</b>bedrooms</div><div class="fact"><b>2</b>dogs welcome</div><div class="fact"><b>2 min</b>to the sand</div></div></div>
+<div id="book" data-rate="185" data-clean="75" data-min="3" data-sleeps="6"><h3>Book direct</h3><p class="from">From &pound;185 a night</p><div class="cal"></div>
+<label for="g">Guests</label><select id="g"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option selected>6</option></select>
+<div class="quote"></div><p class="legend">Struck-through dates are booked. Demo data.</p></div>
+</div></section>
+
+<section class="sand"><div class="in"><h2>Everything for a proper seaside stay</h2>
+<div class="feat"><div><span>🐕</span><h3>Dog friendly</h3><p>Bowls, towels and a rinse-off tap for sandy paws.</p></div>
+<div><span>🔥</span><h3>Log burner</h3><p>Cosy evenings after a wild-weather walk.</p></div>
+<div><span>🏄</span><h3>Board store</h3><p>Secure store for surfboards and paddleboards.</p></div>
+<div><span>🍳</span><h3>Big kitchen</h3><p>Room for everyone, with a huge farmhouse table.</p></div></div></div></section>
+
+<section id="gallery"><div class="in"><h2>A peek inside</h2>
+<div class="gal">
+<svg viewBox="0 0 400 280"><rect width="400" height="280" fill="#bfe4f2"/><rect y="170" width="400" height="110" fill="#f2dda6"/><rect x="60" y="60" width="120" height="110" fill="#fff"/><rect x="220" y="90" width="120" height="80" fill="#ef6f5e"/><text x="200" y="250" text-anchor="middle" font-family="Nunito" font-size="16" fill="#155a7a">Sunny lounge</text></svg>
+<svg viewBox="0 0 400 280"><rect width="400" height="280" fill="#fdf1d8"/><rect x="40" y="110" width="320" height="90" rx="10" fill="#2b7fa3"/><rect x="60" y="90" width="120" height="40" rx="8" fill="#fff"/><rect x="220" y="90" width="120" height="40" rx="8" fill="#fff"/><text x="200" y="250" text-anchor="middle" font-family="Nunito" font-size="16" fill="#155a7a">Master bedroom</text></svg>
+<svg viewBox="0 0 400 280"><rect width="400" height="280" fill="#8fd0ea"/><rect y="150" width="400" height="130" fill="#3f9cc0"/><rect x="40" y="130" width="320" height="16" fill="#c9a66b"/><circle cx="330" cy="60" r="30" fill="#fff6c9"/><text x="200" y="250" text-anchor="middle" font-family="Nunito" font-size="16" fill="#fff">Sunset deck</text></svg>
+</div></div></section>
+
+<section id="reviews" class="sand"><div class="in"><h2>Guests say</h2><span class="score">9.6 / 10</span> <small>Example score from the reviews platform we connect to</small>
+<div class="rev"><blockquote>“The dog never wanted to leave. Neither did we.”<cite>Alex, family of four</cite></blockquote>
+<blockquote>“Waking up to that view. Spotless, warm and so welcoming.”<cite>Priya &amp; Sam</cite></blockquote>
+<blockquote>“Perfect for our friends' getaway. The deck at sunset was the highlight.”<cite>The Hartley group</cite></blockquote></div>
+<p class="policy-strip">How we collect and display reviews: see our <a href="#policy">reviews policy</a> (a page Stars &amp; Stiles Compliance Watch keeps up to date).</p></div></section>
+
+<section id="policy"><div class="in"><h2>Our policies</h2><p>On a real site, this is where your reviews policy, booking terms, cancellation policy, privacy notice and house rules live, each on its own page, kept current for you.</p></div></section>
+
+<footer>The Old Lifeboat House is a fictional example created by <a href="../../">Stars &amp; Stiles</a> to show a seaside design.</footer>
+<script src="../demo.js"></script>
+</body></html>

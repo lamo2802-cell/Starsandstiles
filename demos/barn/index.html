@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thorn Barn | Example Cotswolds holiday let</title>
+<meta name="description" content="Example site: a fictional contemporary barn holiday let, designed by Stars & Stiles.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23c9a66b'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../widget.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--paper:#f4f0e8;--ink:#1f1d1a;--clay:#b5714a;--oat:#c9a66b;--line:#d9d2c3;--muted:#6d675c;
+ --w-bg:#fff;--w-ink:var(--ink);--w-line:var(--line);--w-acc:var(--ink);--w-acc-ink:#fff;--w-acc-soft:#ede6d6;--w-r:0;--w-font:'Work Sans',sans-serif}
+body{font-family:'Work Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-weight:300}
+h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400}
+a{color:var(--clay)}
+header.top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:1.4rem 5%;border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:100}
+.brand{grid-column:2;font-family:'DM Serif Display',serif;font-size:1.7rem;text-decoration:none;color:var(--ink)}
+header nav{display:flex;gap:1.6rem;grid-column:3;justify-content:flex-end}
+header nav a{font-size:.8rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+header nav a.book{border:1px solid var(--ink);padding:.4rem 1rem}
+header nav a.book:hover{background:var(--ink);color:#fff}
+@media(max-width:700px){header.top{grid-template-columns:1fr}.brand{grid-column:1;text-align:center}header nav{grid-column:1;justify-content:center;margin-top:.6rem;flex-wrap:wrap}}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;min-height:82vh}
+@media(max-width:860px){.hero{grid-template-columns:1fr}}
+.hero .txt{padding:6rem 8% 4rem;display:flex;flex-direction:column;justify-content:center}
+.hero small{font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;color:var(--clay);font-weight:500}
+.hero h1{font-size:clamp(3rem,7vw,6rem);line-height:1;margin:1rem 0 1.4rem}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:460px}
+.hero .cta{margin-top:2rem;display:flex;gap:1.4rem;align-items:center}
+.btn{background:var(--ink);color:#fff;padding:1rem 2rem;text-decoration:none;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+.hero .art{background:var(--oat);position:relative;min-height:340px;overflow:hidden}
+.hero .art svg{position:absolute;inset:0;width:100%;height:100%}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats div{padding:2rem 1.5rem;border-right:1px solid var(--line);text-align:center}
+.stats b{font-family:'DM Serif Display',serif;font-size:2.4rem;font-weight:400;display:block}
+.stats span{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+section{padding:6rem 5%}
+.in{max-width:1180px;margin:auto}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+@media(max-width:860px){.grid{grid-template-columns:1fr;gap:3rem}}
+section h2{font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.1;margin-bottom:1.4rem}
+.no{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--clay);font-weight:500;margin-bottom:1rem}
+.rooms{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);margin-top:1rem;border:1px solid var(--line)}
+.rooms div{background:var(--paper);padding:1.5rem}
+.rooms h3{font-size:1.25rem}
+.rooms p{font-size:.9rem;color:var(--muted)}
+.dark{background:var(--ink);color:#f0ebe0}
+.dark .no{color:var(--oat)}
+.dark li{list-style:none;padding:.9rem 0;border-bottom:1px solid #3a3731;display:flex;gap:1rem}
+.dark li::before{content:"—";color:var(--oat)}
+.big{font-family:'DM Serif Display',serif;font-size:clamp(1.6rem,3.2vw,2.5rem);line-height:1.3;max-width:900px}
+.big cite{display:block;margin-top:1.2rem;font-family:'Work Sans';font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-style:normal}
+.policy-strip{font-size:.85rem;color:var(--muted);margin-top:2rem}
+footer{padding:2.5rem 5%;text-align:center;font-size:.85rem;color:var(--muted);border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="demo-banner"><span>Example site &mdash; Thorn Barn is a fictional property. Dates, prices and reviews are for demonstration only.</span><a href="../../showcase.html">&larr; Back to Stars &amp; Stiles</a></div>
+<header class="top"><a class="brand" href="#">Thorn Barn</a><nav><a href="#about">The barn</a><a href="#events">Gatherings</a><a class="book" href="#book">Book</a></nav></header>
+
+<div class="hero">
+<div class="txt"><small>The Cotswolds &middot; Gloucestershire</small><h1>Space for<br>everyone.</h1><p>A beautifully converted barn with room for ten, a table for twelve and a garden made for long weekends.</p><div class="cta"><a class="btn" href="#book">Check dates</a></div></div>
+<div class="art"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="500" fill="#c9a66b"/><rect x="60" y="150" width="280" height="260" fill="#f4f0e8"/><path d="M40 152 L200 50 L360 152Z" fill="#1f1d1a"/><rect x="90" y="200" width="70" height="210" fill="#1f1d1a"/><rect x="185" y="200" width="70" height="110" fill="#b5714a"/><rect x="275" y="200" width="45" height="110" fill="#b5714a"/><rect x="0" y="410" width="400" height="90" fill="#8c6a3e"/><g fill="#4d7a5a"><circle cx="40" cy="400" r="26"/><circle cx="362" cy="404" r="30"/></g></svg></div>
+</div>
+<div class="stats"><div><b>10</b><span>Guests</span></div><div><b>5</b><span>Bedrooms</span></div><div><b>4</b><span>Bathrooms</span></div><div><b>2</b><span>Acres</span></div></div>
+
+<section id="about"><div class="in grid">
+<div><p class="no">01 &mdash; The barn</p><h2>Character outside. Calm inside.</h2>
+<p style="color:var(--muted)">Original oak beams and warm Cotswold stone meet clean, contemporary interiors. A vaulted kitchen and dining hall anchors the house, with quiet bedrooms, a snug and a games barn spread around a sheltered courtyard.</p>
+<div class="rooms"><div><h3>The Hall</h3><p>Table for twelve under original beams.</p></div><div><h3>The Snug</h3><p>Wood stove, sofas, board games.</p></div><div><h3>The Courtyard</h3><p>Fire pit, BBQ and outdoor dining.</p></div><div><h3>Games Barn</h3><p>Table tennis, darts and a projector.</p></div></div></div>
+<div id="book" data-rate="410" data-clean="150" data-min="3" data-sleeps="10"><h3>Book the barn</h3><p class="from">From &pound;410 a night</p><div class="cal"></div>
+<label for="g">Guests</label><select id="g"><option>2</option><option>4</option><option>6</option><option>8</option><option selected>10</option></select>
+<div class="quote"></div><p class="legend">Struck-through dates are booked. Demo data.</p></div>
+</div></section>
+
+<section id="events" class="dark"><div class="in grid"><div><p class="no">02 &mdash; Gatherings</p><h2>Made for milestones</h2><p style="color:#c8c1b0">Big birthdays, family reunions, hen weekends and quiet team retreats. The barn is set well back from neighbours and designed for groups.</p></div>
+<ul><li>Chef and catering introductions</li><li>Early check-in and late check-out on request</li><li>Baby equipment and dog beds, on request</li><li>EV charger and ample parking</li></ul></div></section>
+
+<section><div class="in"><p class="no">03 &mdash; Guests</p><p class="big">“We had 22 people across the weekend and the barn absorbed every one of them. The kitchen alone was worth the trip.”<cite>Example guest review &middot; 9.5 / 10 example score</cite></p>
+<p class="policy-strip">How we collect and display reviews: see our <a href="#policy">reviews policy</a>.</p></div></section>
+
+<section id="policy" style="background:#ebe5d8"><div class="in"><p class="no">04 &mdash; Good to know</p><h2>Our policies</h2><p style="color:var(--muted);max-width:640px">On a real site, your reviews policy, group booking terms, cancellation policy, privacy notice and safety information each have their own page. With Compliance Watch, we keep them current as rules change.</p></div></section>
+
+<footer>Thorn Barn is a fictional example created by <a href="../../">Stars &amp; Stiles</a> to show a contemporary, editorial design.</footer>
+<script src="../demo.js"></script>
+</body></html>

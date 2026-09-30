@@ -1,0 +1,28 @@
+/* Shared booking widget styles, themed via CSS variables set by each demo */
+.demo-banner{background:#141c2e;color:#fff;font:500 13px/1.4 Inter,system-ui,sans-serif;padding:.55rem 5%;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;position:relative;z-index:200}
+.demo-banner a{color:#d9a441;text-decoration:none;font-weight:600}
+#book{background:var(--w-bg,#fff);color:var(--w-ink,#222);border:1px solid var(--w-line,#ddd);border-radius:var(--w-r,6px);padding:1.4rem;font-family:var(--w-font,inherit)}
+#book h3{margin-bottom:.2rem}
+#book .from{font-size:.9rem;opacity:.7;margin-bottom:1rem}
+#book .nav{display:flex;justify-content:space-between;margin-bottom:.5rem}
+#book .nav button{background:none;border:1px solid var(--w-line,#ddd);color:inherit;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1rem}
+#book .months{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:1100px){#book .months{grid-template-columns:1fr 1fr}}
+#book .mh{font-weight:600;margin-bottom:.4rem;font-size:.95rem}
+#book .dow,#book .days{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center}
+#book .dow i{font-style:normal;font-size:.7rem;opacity:.55;padding:.2rem 0}
+#book .d{border:0;background:none;color:inherit;font:inherit;font-size:.85rem;padding:.5rem 0;border-radius:4px;cursor:pointer}
+#book .d:hover:not(:disabled){background:var(--w-acc-soft,#eee)}
+#book .d.b{opacity:.28;text-decoration:line-through;cursor:not-allowed}
+#book .d.sel{background:var(--w-acc,#333);color:var(--w-acc-ink,#fff)}
+#book .d.rng{background:var(--w-acc-soft,#eee)}
+#book label{display:block;font-size:.8rem;margin:1rem 0 .3rem;font-weight:600}
+#book select{width:100%;padding:.65rem;border:1px solid var(--w-line,#ddd);border-radius:4px;font:inherit;background:transparent;color:inherit}
+#book .quote{margin-top:1rem;font-size:.92rem}
+#book .quote .row{display:flex;justify-content:space-between;padding:.35rem 0;border-bottom:1px solid var(--w-line,#ddd)}
+#book .quote .tot{font-weight:700;font-size:1.05rem}
+#book .quote .sm{font-size:.85rem;opacity:.75}
+#book .hint{opacity:.7;font-size:.9rem}
+#book .reserve{width:100%;margin-top:1rem;padding:.85rem;border:0;border-radius:var(--w-r,4px);background:var(--w-acc,#333);color:var(--w-acc-ink,#fff);font:600 1rem var(--w-font,inherit);cursor:pointer}
+#book .legend{font-size:.75rem;opacity:.6;margin-top:.8rem}
+.policy-strip a{color:inherit}
