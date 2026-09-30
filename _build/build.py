@@ -7,16 +7,44 @@ SITE = "https://starsandstiles.co.uk"
 SPARK = ('<svg class="sp %s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C12.5 7 17 11.5 24 12C17 12.5 12.5 17 12 24C11.5 17 7 12.5 0 12C7 11.5 11.5 7 12 0Z" fill="currentColor"/></svg>')
 def spark(cls=""): return SPARK % cls
 
-GATE = ('<svg class="gate" viewBox="0 0 220 74" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">'
-  # stone walls left and right
-  '<path d="M6 62h70M6 55h64M10 48h58M14 41h48M6 62v-7M28 62v-7M50 62v-7M18 55v-7M40 55v-7M60 55v-7M24 48v-7M46 48v-7"/>'
-  '<path d="M144 62h70M150 55h64M152 48h58M158 41h48M164 62v-7M186 62v-7M206 62v-7M172 55v-7M194 55v-7M160 48v-7M182 48v-7"/>'
-  # gate posts, rails, brace
-  '<path d="M80 66V22M140 66V22M80 24h60M80 33h60M80 44h60M80 55h60M80 55l60-31"/>'
-  '<path d="M77 22h6M137 22h6"/>'
-  # grass tufts
-  '<path d="M70 66c1-5 2-7 4-9M74 66c0-4 1-7 2-9M146 66c-1-5-2-7-4-9M142 66c0-4-1-7-2-9M100 68c0-4 1-6 2-8M118 68c0-4-1-6-2-8M6 68h208" opacity=".8"/>'
-  '</svg>')
+def _gate():
+    """Hand-drawn style five-bar gate between dry stone walls, with grass tufts."""
+    import random
+    rnd = random.Random(7)
+    o = ['<svg class="gate" viewBox="0 0 260 84" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round">']
+    def wall(rows):
+        for (yt, yb, xs, xe) in rows:
+            x = xs
+            while x < xe - 5:
+                w = min(rnd.choice([11, 13, 15, 17, 19]), xe - x)
+                h = yb - yt
+                o.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" rx="2.4" fill="#f5f2eb"/>' % (x, yt + rnd.uniform(-.7, .7), w - 1, h))
+                x += w
+    wall([(58, 68, 6, 84), (48, 58, 14, 84), (38, 48, 36, 84), (28, 38, 62, 84)])
+    wall([(58, 68, 176, 254), (48, 58, 176, 246), (38, 48, 176, 224), (28, 38, 176, 198)])
+    # posts with caps
+    for x in (86, 168):
+        o.append('<rect x="%d" y="16" width="6" height="52" fill="#f5f2eb"/><path d="M%d 16l3 -4l3 4"/>' % (x, x))
+    # rails (double-line planks), five bars
+    for y in (22, 31, 40, 49, 58):
+        o.append('<rect x="92" y="%d" width="76" height="4" fill="#f5f2eb"/>' % y)
+    # diagonal brace and centre slat
+    o.append('<path d="M92 62L168 24M92 57L168 19" />')
+    o.append('<path d="M130 20v42"/>')
+    # latch
+    o.append('<path d="M160 36h5"/>')
+    # grass tufts
+    def tuft(x, y, n=4, hgt=9):
+        for k in range(n):
+            dx = (k - (n - 1) / 2) * 2.6
+            o.append('<path d="M%.1f %.1fq%.1f -%.1f %.1f -%.1f" opacity=".85"/>' % (x + dx, y, dx * .5, hgt * .55, dx * 1.3, hgt - abs(dx) * .6))
+    for x in (78, 96, 112, 148, 164, 180, 8, 246):
+        tuft(x, 70, rnd.choice([3, 4, 5]), rnd.choice([7, 9, 11]))
+    o.append('<path d="M2 70h256" opacity=".55"/>')
+    o.append('</svg>')
+    return "".join(o)
+
+GATE = _gate()
 
 def BRAND():
     return ('<a class="brand" href="index.html">' + GATE + spark("b1") + spark("b2") +
@@ -118,7 +146,7 @@ def page(fname, title, desc, body):
 
 
 # ---------- HOME ----------
-GATEPHOTO = "https://images.unsplash.com/photo-1771526163539-24cb3ea41398?auto=format&fit=crop&q=75&w=1600"
+GATEPHOTO = "https://images.unsplash.com/photo-1737027883185-24b41fca2431?auto=format&fit=crop&q=75&w=1600"
 WINDOWPHOTO = "https://images.unsplash.com/photo-1770893670070-42a3c6f85133?auto=format&fit=crop&q=75&w=1200"
 
 def photo(url, fallback, alt, cls=""):
@@ -135,7 +163,7 @@ page("index.html", "Stars & Stiles | Direct booking websites for holiday let own
 <p>We can look after your site for you, or hand it over once it&rsquo;s live. Your choice.</p>
 <a class="btn" href="#how">See how it works &nbsp;&rarr;</a>
 </div>
-<div class="hh-photo">{photo(GATEPHOTO, "assets/cringley-413188738.jpg", "A wooden gate in a dry stone wall at golden hour")}
+<div class="hh-photo">{photo(GATEPHOTO, "assets/cringley-413188738.jpg", "A stone barn on a green hillside in the Yorkshire Dales")}
 {spark("s1")}{spark("s2")}{spark("s3")}</div>
 </div></section>
 

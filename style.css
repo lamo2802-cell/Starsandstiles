@@ -29,11 +29,11 @@ h3{font-size:1.45rem;margin-bottom:.5rem}
 header.topbar{background:var(--cream);position:relative;z-index:50}
 header.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding-top:1.1rem;padding-bottom:1.1rem}
 .brand{position:relative;display:flex;flex-direction:column;align-items:center;text-decoration:none;color:var(--forest);width:max-content;line-height:1}
-.brand .gate{width:190px;height:auto;margin-bottom:.4rem}
-.brand .sp.b1{width:11px;height:11px;top:-2px;right:0;color:var(--gold)}
-.brand .sp.b2{width:7px;height:7px;top:14px;right:-12px;color:var(--gold);animation-delay:-2s}
-.brand .bn{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.45rem;letter-spacing:.3em;margin-right:-.3em}
-.brand .bt{font-size:.5rem;letter-spacing:.32em;margin-top:.45rem;margin-right:-.32em;color:var(--muted);font-weight:400}
+.brand .gate{width:230px;height:auto;margin-bottom:.5rem}
+.brand .sp.b1{width:13px;height:13px;top:-6px;right:14px;color:var(--forest)}
+.brand .sp.b2{width:8px;height:8px;top:8px;right:-2px;color:var(--forest);animation-delay:-2s}
+.brand .bn{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.7rem;letter-spacing:.36em;margin-right:-.36em}
+.brand .bt{font-size:.5rem;letter-spacing:.42em;margin-top:.5rem;margin-right:-.42em;color:var(--muted);font-weight:400}
 nav.site ul{display:flex;gap:2.2rem;list-style:none;align-items:center}
 nav.site ul a{color:var(--ink);text-decoration:none;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;font-weight:400;padding:.3rem 0;border-bottom:1px solid transparent}
 nav.site ul a:hover,nav.site ul a[aria-current]{border-bottom-color:var(--gold)}
@@ -44,7 +44,7 @@ nav.site .cta:hover{background:var(--forest-2)}
   .menu-btn{display:block}
   nav.site ul{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);border-top:1px solid var(--stone);flex-direction:column;padding:1.4rem 5% 1.8rem;gap:1.2rem;align-items:flex-start;box-shadow:0 12px 24px rgba(31,47,38,.1)}
   nav.site ul.open{display:flex}
-  .brand .gate{width:104px}.brand .bn{font-size:1.15rem}
+  .brand .gate{width:150px}.brand .bn{font-size:1.15rem}
 }
 
 /* ---------- buttons ---------- */
