@@ -1,8 +1,8 @@
 /* Light-touch motion: scroll reveals + nav shadow. Skipped if the visitor prefers reduced motion. */
 (function () {
   document.documentElement.classList.add('js');
-  var els = document.querySelectorAll('.card, .step, .show, .tl, .section-head, .notice, table.cmp, .steps > *');
-  var nav = document.querySelector('nav.site');
+  var els = document.querySelectorAll('.card, .step, .show, .tl, .section-head, .notice, table.cmp, .steps > *, .strip .cells > div, .band .cells > div, .s-in, .hh-photo');
+  var nav = document.querySelector('header.topbar');
   function onScroll() { if (nav) nav.classList.toggle('scrolled', window.scrollY > 10); }
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
   if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {

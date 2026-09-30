@@ -4,14 +4,57 @@ OUT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EMAIL = "hello@starsandstiles.co.uk"
 SITE = "https://starsandstiles.co.uk"
 
-MARK = ('<svg class="mark" viewBox="0 0 48 48" width="34" height="34" aria-hidden="true">'
-        '<circle class="moon" cx="31" cy="15" r="9" fill="#d9a441"/>'
-        '<circle cx="35" cy="12" r="8" fill="#141c2e" class="bite"/>'
-        '<path d="M4 40h40" stroke="#f7f3ea" stroke-width="3" stroke-linecap="round"/>'
-        '<path d="M13 40V22M31 40V22" stroke="#f7f3ea" stroke-width="4" stroke-linecap="round"/>'
-        '<path d="M10 27h24" stroke="#f7f3ea" stroke-width="4" stroke-linecap="round"/>'
-        '<path d="M13 40h18" stroke="#d9a441" stroke-width="3" stroke-linecap="round" opacity="0"/>'
-        '</svg>')
+SPARK = ('<svg class="sp %s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C12.5 7 17 11.5 24 12C17 12.5 12.5 17 12 24C11.5 17 7 12.5 0 12C7 11.5 11.5 7 12 0Z" fill="currentColor"/></svg>')
+def spark(cls=""): return SPARK % cls
+
+GATE = ('<svg class="gate" viewBox="0 0 220 74" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">'
+  # stone walls left and right
+  '<path d="M6 62h70M6 55h64M10 48h58M14 41h48M6 62v-7M28 62v-7M50 62v-7M18 55v-7M40 55v-7M60 55v-7M24 48v-7M46 48v-7"/>'
+  '<path d="M144 62h70M150 55h64M152 48h58M158 41h48M164 62v-7M186 62v-7M206 62v-7M172 55v-7M194 55v-7M160 48v-7M182 48v-7"/>'
+  # gate posts, rails, brace
+  '<path d="M80 66V22M140 66V22M80 24h60M80 33h60M80 44h60M80 55h60M80 55l60-31"/>'
+  '<path d="M77 22h6M137 22h6"/>'
+  # grass tufts
+  '<path d="M70 66c1-5 2-7 4-9M74 66c0-4 1-7 2-9M146 66c-1-5-2-7-4-9M142 66c0-4-1-7-2-9M100 68c0-4 1-6 2-8M118 68c0-4-1-6-2-8M6 68h208" opacity=".8"/>'
+  '</svg>')
+
+def BRAND():
+    return ('<a class="brand" href="index.html">' + GATE + spark("b1") + spark("b2") +
+            '<span class="bn">STARS &amp; STILES</span><span class="bt">FOR HOLIDAY LET OWNERS</span></a>')
+
+def ico(name):
+    P = {
+     "calendar":'<rect x="5" y="7" width="22" height="20" rx="2"/><path d="M5 13h22M11 4v5M21 4v5"/>',
+     "chat":'<path d="M6 8h20a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H15l-6 5v-5H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z"/>',
+     "house":'<path d="M4 15L16 4l12 11M7 13v15h18V13M13 28v-8h6v8"/>',
+     "shield":'<path d="M16 4l10 4v8c0 6-4 10-10 12C10 26 6 22 6 16V8z"/><path d="M11.5 16l3.5 3.5 6-7"/>',
+     "coin":'<circle cx="16" cy="16" r="11"/><path d="M20 11.5c-1-1.3-2.4-1.8-4-1.8-2.4 0-4 1.4-4 3.3 0 4 8 2.4 8 6.7 0 2-1.8 3.3-4.2 3.3-1.8 0-3.3-.7-4.3-2M10.5 16h9"/>',
+     "heart":'<path d="M16 27C6 20 4 14.5 4 11.5A6 6 0 0 1 16 9a6 6 0 0 1 12 2.5C28 14.5 26 20 16 27z"/>',
+     "sliders":'<path d="M5 9h22M5 16h22M5 23h22"/><circle cx="12" cy="9" r="2.4" fill="#faf8f3"/><circle cx="21" cy="16" r="2.4" fill="#faf8f3"/><circle cx="10" cy="23" r="2.4" fill="#faf8f3"/>',
+     "mug":'<path d="M6 10h15v10a6 6 0 0 1-6 6h-3a6 6 0 0 1-6-6zM21 12h3a3 3 0 0 1 0 6h-3"/><path d="M11 4c-1 1.5 1 2.5 0 4M16 4c-1 1.5 1 2.5 0 4"/>',
+     "sun":'<circle cx="16" cy="16" r="5"/><path d="M16 4v4M16 24v4M4 16h4M24 16h4M7.5 7.5l2.8 2.8M21.7 21.7l2.8 2.8M7.5 24.5l2.8-2.8M21.7 10.3l2.8-2.8"/>',
+    }
+    return '<svg class="ic" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">'+P[name]+'</svg>'
+
+def botanical():
+    import math
+    out=['<svg class="botan" viewBox="0 0 200 320" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round">']
+    stems=[(70,318,[(66,250),(74,190),(72,120)],72,90,26),(120,318,[(124,260),(112,200),(118,150)],118,138,22),(160,318,[(158,270),(166,220),(160,190)],160,178,17)]
+    for x0,y0,pts,hx,hy,r in stems:
+        d="M%d %d "%(x0,y0)+" ".join("L%d %d"%p for p in pts)+" L%d %d"%(hx,hy+r*0.4)
+        out.append('<path d="%s"/>'%d)
+        # umbel
+        n=11
+        for k in range(n):
+            a=math.pi*(1.1+0.8*k/(n-1))*-1+math.pi  # fan upward
+            a=-math.pi/2+(k-(n-1)/2)*0.32
+            ex=hx+math.cos(a)*r*1.25; ey=hy-r*0.4+math.sin(a)*r*1.25+r*0.35
+            out.append('<path d="M%d %d L%.1f %.1f"/><circle cx="%.1f" cy="%.1f" r="1.8" fill="currentColor"/>'%(hx,hy+r*0.3,ex,ey,ex,ey))
+        # leaves
+        for (lx,ly,dx) in [(x0,y0-50,-26),(x0+4,y0-110,24),(x0-2,y0-165,-20)]:
+            out.append('<path d="M%d %d q%d -22 %d -34 M%d %d q%d -6 %d -14 M%d %d q%d -8 %d -20"/>'%(lx,ly,dx,dx*1.6,lx+dx*0.5,ly-12,dx*0.5,dx*0.8,lx+dx*0.9,ly-22,dx*0.5,dx*0.8))
+    out.append('</svg>')
+    return "".join(out)
 
 NAV = [("index.html", "Home"), ("services.html", "What we do"), ("compliance.html", "Compliance Watch"),
        ("showcase.html", "Showcase")]
@@ -26,7 +69,7 @@ def head(title, desc, path):
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{SITE}/{path}">
-<meta name="theme-color" content="#141c2e">
+<meta name="theme-color" content="#f5f2eb">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:type" content="website">
@@ -35,7 +78,7 @@ def head(title, desc, path):
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="motion.js" defer></script>
 </head>
@@ -47,11 +90,11 @@ def nav(current):
     cur = ' aria-current="page"'
     items = "".join(
         '<li><a href="%s"%s>%s</a></li>' % (h, cur if h == current else "", t) for h, t in NAV)
-    return f"""<nav class="site"><div class="wrap">
-<a class="logo" href="index.html">{MARK}<b>Stars <span>&amp;</span> Stiles</b></a>
+    return f"""<header class="topbar"><div class="wrap">
+{BRAND()}
 <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')">Menu</button>
-<ul id="m">{items}<li><a class="cta" href="contact.html">Get in touch</a></li></ul>
-</div></nav>
+<nav class="site"><ul id="m">{items}<li><a class="cta" href="contact.html">Get in touch</a></li></ul></nav>
+</div></header>
 """
 
 
@@ -63,7 +106,7 @@ FOOT = f"""<footer class="site"><div class="wrap">
 <div><h4>Contact</h4><a href="disclaimer.html">Important information</a><a href="mailto:{EMAIL}">{EMAIL}</a><a href="tel:+447854075084">07854 075084</a></div>
 </div>
 <div class="fine">&copy; 2026 Stars And Stiles Ltd (Company No. 14294081). Registered in England &amp; Wales.<br>
-Our regulatory updates are general information and guidance only. They are not legal, tax or professional advice, and responsibility for compliance stays with the property owner. <a href="disclaimer.html" style="display:inline;color:var(--gold)">Read more</a>.</div>
+Our regulatory updates are general information and guidance only. They are not legal, tax or professional advice, and responsibility for compliance stays with the property owner. <a href="disclaimer.html" style="display:inline">Read more</a>.</div>
 </div></footer>
 </body></html>
 """
@@ -75,29 +118,60 @@ def page(fname, title, desc, body):
 
 
 # ---------- HOME ----------
+GATEPHOTO = "https://images.unsplash.com/photo-1771526163539-24cb3ea41398?auto=format&fit=crop&q=75&w=1600"
+WINDOWPHOTO = "https://images.unsplash.com/photo-1770893670070-42a3c6f85133?auto=format&fit=crop&q=75&w=1200"
+
+def photo(url, fallback, alt, cls=""):
+    return f'<img class="{cls}" src="{url}" alt="{alt}" loading="lazy" onerror="this.onerror=null;this.src=\'{fallback}\'">'
+
 page("index.html", "Stars & Stiles | Direct booking websites for holiday let owners",
      "We build direct booking websites for UK holiday let owners, then manage them for you or hand them over, and keep you informed of changing regulations. Built by holiday let owners.",
-     """
-<header class="hero"><span class="shoot"></span><span class="shoot s2"></span><div class="wrap">
-<p class="eyebrow">Direct booking websites for holiday let owners</p>
-<h1>Your cottage. Your website.<br>Your bookings.</h1>
-<p class="lead">We build a beautiful direct booking site for your holiday let, so more guests book with you instead of paying a platform. We can look after it for you, or hand it over once it&rsquo;s live. Your choice. And as an optional extra, we keep you informed as the rules for holiday lets change.</p>
-<a class="btn" href="contact.html">Talk to us</a><a class="btn ghost" href="showcase.html">See example sites</a>
-</div></header>
+     f"""
+<section class="home-hero"><div class="wrap">
+<div class="hh-text">
+<h1>Your holiday let.<br>Your own website.<br>Your bookings.</h1>
+<span class="rule"></span>
+<p>We build direct booking websites for holiday let owners, so more guests book with you instead of paying a platform.</p>
+<p>We can look after your site for you, or hand it over once it&rsquo;s live. Your choice.</p>
+<a class="btn" href="#how">See how it works &nbsp;&rarr;</a>
+</div>
+<div class="hh-photo">{photo(GATEPHOTO, "assets/cringley-413188738.jpg", "A wooden gate in a dry stone wall at golden hour")}
+{spark("s1")}{spark("s2")}{spark("s3")}</div>
+</div></section>
 
-<section class="block"><div class="wrap">
-<div class="section-head"><p class="eyebrow" style="color:var(--gold-dark)">Why direct</p>
-<h2>Keep the guest. Keep the margin.</h2>
-<p>Listing sites are brilliant for being found, but every booking can cost you a commission, and the guest relationship belongs to the platform. A direct booking site puts you back in charge of pricing, policies and repeat business, alongside the platforms you already use.</p></div>
-<div class="grid g3">
-<div class="card"><div class="icon">£</div><h3>No commission</h3><p>Direct bookings carry no booking commission. You keep what your guests pay, less only the card processing fee charged by the payment provider, a fraction of typical listing-site fees.</p></div>
-<div class="card"><div class="icon">♥</div><h3>Repeat guests</h3><p>Guests who book direct are yours to welcome back, with your own emails, offers and returning-guest experience.</p></div>
-<div class="card"><div class="icon">⚙</div><h3>No double bookings</h3><p>Your calendar syncs with Airbnb, Booking.com and other listing sites, so a booking on one place blocks the dates everywhere else.</p></div>
+<section class="strip"><div class="wrap"><div class="cells">
+<div><span class="i">{ico("house")}</span><h3>A site of your own</h3><p>Direct bookings on your own domain, beautifully designed.</p></div>
+<div><span class="i">{ico("calendar")}</span><h3>Calendars in sync</h3><p>Airbnb, Booking.com and other listing sites, no double bookings.</p></div>
+<div><span class="i">{ico("chat")}</span><h3>Guest communications</h3><p>Confirmations, reminders, check-in and check-out, sent for you.</p></div>
+<div><span class="i">{ico("shield")}</span><h3>Compliance Watch</h3><p>Plain-English updates when the rules change. An optional extra.</p></div>
 </div></div></section>
 
-<section class="block alt"><div class="wrap">
-<div class="section-head"><p class="eyebrow" style="color:var(--gold-dark)">The core service</p>
+<section class="story"><div class="s-photo">{photo(WINDOWPHOTO, "assets/cringley-living.jpg", "Sunlight through a cottage window")}</div>
+<div class="s-panel"><div class="s-in">
+<p class="label">Built by owners</p>
+<h2>We run a holiday let too.</h2>
+<span class="rule"></span>
+<p>Stars &amp; Stiles is the company behind <strong>Cringley Cottage</strong>, our own dog-friendly holiday let in Askrigg in the Yorkshire Dales. Its website takes direct bookings, syncs with Airbnb and Booking.com, and runs day to day for us.</p>
+<p>When the rules changed on consumer reviews, we made the update to our own site first. Compliance Watch is that same routine, offered to other owners.</p>
+<a class="btn" href="https://www.cringleycottage.com" target="_blank" rel="noopener">Visit Cringley Cottage &nbsp;&rarr;</a>
+</div>{botanical()}{spark("s4")}{spark("s5")}</div></section>
+
+<section class="band"><div class="wrap"><div class="band-in">
+<div class="b-text"><p class="label center">A simpler way to run your holiday let</p>
+<h2 class="center">More time for what you love.</h2>
+<div class="cells four">
+<div><span class="i">{ico("coin")}</span><h3>No commission</h3><p>Direct bookings carry no booking commission. You keep what your guests pay, less only the card processing fee charged by the payment provider.</p></div>
+<div><span class="i">{ico("heart")}</span><h3>Happier guests</h3><p>A seamless journey, from booking to check-out.</p></div>
+<div><span class="i">{ico("sliders")}</span><h3>Greater control</h3><p>Your prices, policies and guest relationships, all in one place.</p></div>
+<div><span class="i">{ico("mug")}</span><h3>More freedom</h3><p>We manage it, or hand it over. Either way, more time for you.</p></div>
+</div></div>
+<div class="b-photo"><img src="assets/cringley-garden.jpg" alt="Garden table at Cringley Cottage" loading="lazy"></div>
+</div></div></section>
+
+<section class="block" id="what"><div class="wrap">
+<div class="section-head center"><p class="label">The core service</p>
 <h2>A complete booking website, built around your property</h2>
+<span class="rule"></span>
 <p>Not a template you have to figure out. We design it around your property and set it all up. After launch, we can manage it for you, or hand it over to run yourself.</p></div>
 <div class="grid g2">
 <div class="card"><h3>What guests get</h3><ul class="ticks">
@@ -112,22 +186,25 @@ page("index.html", "Stars & Stiles | Direct booking websites for holiday let own
 <li>Booking notifications straight to your inbox</li>
 <li>Cleaner logins and changeover checklists, if you want them</li>
 <li>Hosting, updates and support by us, or a full hand-over, as you prefer</li></ul></div>
-</div></div></section>
+</div>
+<p class="center" style="margin-top:2.2rem"><a class="btn ghost-dark" href="services.html">Everything we do &nbsp;&rarr;</a></p>
+</div></section>
 
 <section class="block dark"><div class="wrap">
-<div class="section-head"><p class="eyebrow">Optional extra</p>
+<div class="section-head center"><p class="label">Optional extra</p>
 <h2>Compliance Watch: rules change, we keep you posted</h2>
+<span class="rule"></span>
 <p>Running a holiday let now means keeping up with consumer law, safety duties, registration schemes and tax changes. Compliance Watch is an add-on where we track changes that affect holiday lets, send you plain-English updates, and where a change touches your website, we make the update for you.</p></div>
 <div class="grid g3">
 <div class="card"><h3>Updates in plain English</h3><p>What changed, who it affects and what owners commonly need to think about, with links to the official source.</p></div>
 <div class="card"><h3>Website changes done for you</h3><p>When a rule affects your site, such as publishing a reviews policy or how prices are displayed, we can implement it for you.</p></div>
 <div class="card"><h3>Owner tools</h3><p>Things like guest-safety changeover checklists, kept as a dated record you can show if you are ever asked.</p></div>
 </div>
-<p style="margin-top:2rem"><a class="btn" href="compliance.html">How Compliance Watch works</a></p>
+<p class="center" style="margin-top:2.2rem"><a class="btn light" href="compliance.html">How Compliance Watch works &nbsp;&rarr;</a></p>
 </div></section>
 
-<section class="block"><div class="wrap">
-<div class="section-head"><h2>How it works</h2></div>
+<section class="block" id="how"><div class="wrap">
+<div class="section-head center"><p class="label">How it works</p><h2>Four simple steps</h2><span class="rule"></span></div>
 <div class="steps">
 <div class="step"><h3>Chat</h3><p>Tell us about your property, your current listings and how you want to run bookings.</p></div>
 <div class="step"><h3>Design</h3><p>We build a site around your photos and personality. See our examples for the range of styles.</p></div>
@@ -136,19 +213,20 @@ page("index.html", "Stars & Stiles | Direct booking websites for holiday let own
 </div></div></section>
 
 <section class="block alt"><div class="wrap">
-<div class="grid g2" style="align-items:center">
-<div style="border-radius:6px;overflow:hidden"><img src="assets/cringley-413188738.jpg" alt="Cringley Cottage in Askrigg, Yorkshire Dales" loading="lazy"></div>
-<div><p class="eyebrow" style="color:var(--gold-dark)">Built by owners</p>
-<h2>We run this ourselves</h2>
-<p style="margin-bottom:1rem">Stars &amp; Stiles is the company behind <strong>Cringley Cottage</strong>, our own dog-friendly holiday let in Askrigg in the Yorkshire Dales. Its website takes direct bookings, syncs with Airbnb and Booking.com and runs day to day for us, so everything we offer has been used by real guests.</p>
-<p style="margin-bottom:1.6rem">When the rules changed on consumer reviews, we made the update to our own site first. Compliance Watch is that same routine, offered to other owners.</p>
-<a class="btn dark" href="https://www.cringleycottage.com" target="_blank" rel="noopener">Visit Cringley Cottage</a></div>
-</div></div></section>
+<div class="section-head center"><p class="label">Our work</p><h2>Every property is different</h2><span class="rule"></span>
+<p>Each site is unique to its property, with its own look, feel and personality.</p></div>
+<div class="showcase">
+<a class="show" href="demos/seaside/"><div class="thumb" style="background:linear-gradient(180deg,#bfe4f2 0,#eaf6fa 55%,#f4dfb4 55%,#e8cf98 75%,#3f9cc0 75%,#2b7fa3 100%)"><img src="https://images.unsplash.com/photo-1510069551606-f9ec0a62fe28?auto=format&fit=crop&q=75&w=900" alt="White house beside the sea" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>The Old Lifeboat House</h3><p>Coastal, bright and airy.</p><span class="more">View example &rarr;</span></div></a>
+<a class="show" href="demos/highland/"><div class="thumb" style="background:linear-gradient(180deg,#0e1420 0,#26324a 55%,#3a3020 55%,#1a1712 100%)"><img src="https://images.unsplash.com/photo-1773057679427-3aa69c2369e2?auto=format&fit=crop&q=75&w=900" alt="Small white house in a misty Scottish glen" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Corrie Bothy</h3><p>Dark, moody and atmospheric.</p><span class="more">View example &rarr;</span></div></a>
+<a class="show" href="demos/barn/"><div class="thumb" style="background:linear-gradient(180deg,#12372a 0,#12372a 60%,#f2b632 60%,#f2b632 100%)"><img src="https://images.unsplash.com/photo-1766854766161-86ca70a0f245?auto=format&fit=crop&q=75&w=900" alt="Barn interior with exposed beams" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Thorn Barn</h3><p>Clean, contemporary and editorial.</p><span class="more">View example &rarr;</span></div></a>
+</div>
+<p class="center" style="margin-top:2.2rem"><a class="btn ghost-dark" href="showcase.html">See all examples &nbsp;&rarr;</a></p>
+</div></section>
 
-<section class="block"><div class="wrap narrow" style="text-align:center">
-<h2>Let&rsquo;s talk about your property</h2>
-<p style="color:var(--muted);margin-bottom:1.6rem">Tell us a little about your holiday let and we will come back with how we could help and what it would cost.</p>
-<a class="btn" href="contact.html">Get in touch</a></div></section>
+<section class="block cta-block"><div class="wrap narrow center">
+{spark("s6")}<h2>Let&rsquo;s talk about your property</h2>
+<p>Tell us a little about your holiday let and we will come back with how we could help and what it would cost.</p>
+<a class="btn" href="contact.html">Get in touch &nbsp;&rarr;</a></div></section>
 """)
 
 # ---------- SERVICES ----------
@@ -309,7 +387,7 @@ page("contact.html", "Contact | Stars & Stiles",
 <section class="block"><div class="wrap narrow" style="text-align:center">
 <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
 <a class="btn" href="mailto:{EMAIL}?subject=Enquiry%20from%20starsandstiles.co.uk">&#9993;&nbsp; Email us</a>
-<a class="btn dark" href="tel:+447854075084">&#9742;&nbsp; Call 07854 075084</a>
+<a class="btn ghost-dark" href="tel:+447854075084">&#9742;&nbsp; Call 07854 075084</a>
 </div>
 <p style="margin-top:1.6rem;color:var(--muted)">{EMAIL}</p>
 <p style="margin-top:2.4rem;font-size:.9rem;color:var(--muted)">Stars And Stiles Ltd &middot; Company No. 14294081</p>
@@ -340,23 +418,14 @@ page("disclaimer.html", "Important information | Stars & Stiles",
 """)
 
 open(f"{OUT}/assets/favicon.svg", "w").write(
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="10" fill="#141c2e"/><circle cx="31" cy="15" r="9" fill="#d9a441"/><circle cx="35" cy="12" r="8" fill="#141c2e"/><path d="M6 39h36" stroke="#f7f3ea" stroke-width="3" stroke-linecap="round"/><path d="M14 39V23M30 39V23M11 28h22" stroke="#f7f3ea" stroke-width="4" stroke-linecap="round"/></svg>')
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="8" fill="#1f2f26"/><g fill="none" stroke="#f5f2eb" stroke-width="2" stroke-linecap="round"><path d="M12 38V19M36 38V19M12 21h24M12 28h24M12 34h24M12 34l24-13"/><path d="M4 39h40"/></g><path d="M35 5c.3 3 2 4.7 5 5-3 .3-4.7 2-5 5-.3-3-2-4.7-5-5 3-.3 4.7-2 5-5z" fill="#c9a86a"/></svg>')
 open(f"{OUT}/robots.txt", "w").write(f"User-agent: *\nAllow: /\nDisallow: /demos/\nSitemap: {SITE}/sitemap.xml\n")
 pages = ["", "services.html", "compliance.html", "showcase.html", "contact.html", "disclaimer.html"]
 open(f"{OUT}/sitemap.xml", "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
                                       "".join(f"<url><loc>{SITE}/{p}</loc></url>\n" for p in pages) + "</urlset>\n")
 print("ok")
 
-# ---------- DESIGN B: "Daylight" (same content, different look), served from /v2/ ----------
-BANNER = ('<div class="ab-banner">Design option B &middot; Daylight &nbsp;|&nbsp; <a href="../{p}">Compare with design A (Night sky)</a></div>')
-os.makedirs(f"{OUT}/v2", exist_ok=True)
-for fname in ["index.html", "services.html", "compliance.html", "showcase.html", "contact.html", "disclaimer.html"]:
-    h = open(f"{OUT}/{fname}").read()
-    h = h.replace('href="style.css">', 'href="../style.css">\n<link rel="stylesheet" href="../style-v2.css">')
-    h = h.replace('src="motion.js"', 'src="../motion.js"').replace('href="assets/favicon.svg"', 'href="../assets/favicon.svg"')
-    h = h.replace('src="assets/', 'src="../assets/').replace('url(assets/', 'url(../assets/').replace('href="demos/', 'href="../demos/')
-    h = h.replace('<meta name="theme-color" content="#141c2e">', '<meta name="theme-color" content="#f6f1e7">\n<meta name="robots" content="noindex">')
-    h = h.replace(f'<link rel="canonical" href="{SITE}/', f'<link rel="canonical" href="{SITE}/v2/')
-    h = h.replace('<body>\n', '<body class="v2">\n' + BANNER.format(p=fname if fname != "index.html" else "") + '\n', 1)
-    open(f"{OUT}/v2/{fname}", "w").write(h)
-print("v2 ok")
+
+import shutil
+shutil.rmtree(f"{OUT}/v2", ignore_errors=True)
+print("built")
