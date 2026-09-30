@@ -1,0 +1,43 @@
+/* Design B: "Daylight". Same content and structure as design A, a lighter, friendlier look. */
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&family=Outfit:wght@300;400;500;600&display=swap');
+:root{
+  --night:#23392f;--night-2:#2f4c3e;--gold:#d0703f;--gold-dark:#a94f2a;
+  --cream:#fbf6ec;--stone:#eadfcb;--ink:#22262b;--muted:#5d645e;--green:#3f7a55;
+}
+body{font-family:'Outfit',system-ui,sans-serif;font-size:17px;background:var(--cream)}
+h1,h2,h3{font-family:'Young Serif',Georgia,serif;font-weight:400;letter-spacing:0}
+.logo{font-family:'Young Serif',serif;font-weight:400}
+.logo .mark .bite{fill:#23392f}.logo .mark .moon{fill:#f0b070}
+.ab-banner{background:#fff;border-bottom:1px solid var(--stone);text-align:center;font-size:.8rem;padding:.45rem 1rem;color:var(--muted)}
+.ab-banner a{font-weight:600}
+nav.site{background:rgba(35,57,47,.97)}
+nav.site .cta{border-radius:30px;color:#fff!important}
+
+.hero{isolation:isolate;background:linear-gradient(180deg,#f6ecd6 0,#fbf6ec 100%);color:var(--ink);padding:6.5rem 0 5.5rem}
+.hero::before,.hero::after,.shoot{display:none}
+.hero .wrap::before,.hero .wrap::after{content:"";position:absolute;border-radius:50%;filter:blur(60px);z-index:-1;opacity:.55;animation:drift 14s ease-in-out infinite alternate}
+.hero .wrap::before{width:340px;height:340px;background:#f3c99a;right:4%;top:-40px}
+.hero .wrap::after{width:280px;height:280px;background:#bcd9c1;right:22%;bottom:-70px;animation-delay:-6s}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(-40px,30px) scale(1.15)}}
+.hero p.lead{color:var(--muted)}
+.eyebrow{color:var(--gold-dark)}
+.hero .eyebrow{color:var(--gold-dark)}
+.btn{border-radius:40px;background:var(--gold);border-color:var(--gold);color:#fff}
+.btn:hover{background:var(--gold-dark);border-color:var(--gold-dark)}
+.btn.ghost{color:var(--night);border-color:var(--night)}
+.btn.ghost:hover{background:var(--night);color:#fff;border-color:var(--night)}
+.btn.dark{background:var(--night);border-color:var(--night)}
+.btn.dark:hover{background:var(--night-2)}
+.card,.show,.notice,table.cmp{border-radius:18px}
+.card{box-shadow:0 2px 0 var(--stone)}
+.icon{background:var(--night);color:#f0b070}
+section.block.alt{background:#fff}
+section.block.alt .card{background:var(--cream)}
+section.block.dark{background:var(--night)}
+section.block.dark .card{background:var(--night-2)}
+.tag{background:rgba(208,112,63,.14);color:var(--gold-dark)}
+table.cmp th{background:var(--night)}
+.step::before{color:var(--gold);font-family:'Young Serif',serif}
+footer.site{background:var(--night)}
+footer.site a:hover{color:#f0b070}
+.timeline .tl::before{background:var(--gold)}

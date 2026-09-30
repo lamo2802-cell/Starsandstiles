@@ -24,6 +24,16 @@ header nav a{text-decoration:none;font-weight:600;color:var(--ink);font-size:.95
 .pill{background:var(--coral);color:#fff!important;padding:.45rem 1.1rem;border-radius:30px}
 .hero{position:relative;height:78vh;min-height:520px;overflow:hidden;background:linear-gradient(#8fd0ea,#dff3fa 58%)}
 .hero svg{position:absolute;bottom:0;left:0;width:100%;height:100%}
+.hero .ov{position:absolute;inset:0;background:linear-gradient(rgba(21,90,122,.35),rgba(21,90,122,.05) 45%,rgba(21,90,122,.35))}
+.hero .txt{z-index:2}
+.hero .ph{animation:kb 24s ease-in-out infinite alternate}
+.hero .txt>*{animation:up 1s cubic-bezier(.2,.7,.2,1) both}.hero .txt>*:nth-child(2){animation-delay:.15s}.hero .txt>*:nth-child(3){animation-delay:.3s}@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.08)}}
+.cloud{animation:cdrift 40s linear infinite alternate}.cloud.c2{animation-duration:55s}
+@keyframes cdrift{from{transform:translateX(-60px)}to{transform:translateX(90px)}}
+.w1{animation:bob 5s ease-in-out infinite}.w2{animation:bob 6.5s ease-in-out infinite -2s}.boat{animation:sail 7s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(9px)}}
+@keyframes sail{0%,100%{transform:translate(1000px,500px) rotate(-3deg)}50%{transform:translate(1000px,510px) rotate(3deg)}}
 .hero .txt{position:relative;max-width:1100px;margin:auto;padding:5rem 5% 0;text-align:center}
 .hero h1{font-size:clamp(2.6rem,8vw,5.4rem);color:#fff;text-shadow:0 3px 14px rgba(21,90,122,.45)}
 .hero p{font-size:1.25rem;color:#fff;font-weight:600;text-shadow:0 2px 8px rgba(21,90,122,.5);margin-top:.5rem}
@@ -42,7 +52,7 @@ section h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:1rem}
 .feat span{font-size:1.6rem}
 .feat h3{font-size:1.05rem;margin:.3rem 0}
 .gal{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:1.5rem}
-.gal svg{width:100%;border-radius:18px;display:block;box-shadow:0 4px 16px rgba(21,90,122,.15)}
+.gal .tile{border-radius:18px;box-shadow:0 4px 16px rgba(21,90,122,.15);margin:0}
 .rev{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:1.5rem}
 .rev blockquote{background:#fff;border-radius:16px;padding:1.3rem;box-shadow:0 3px 12px rgba(0,0,0,.06)}
 .rev cite{display:block;margin-top:.6rem;font-style:normal;font-weight:800;color:var(--sea);font-size:.9rem}
@@ -60,15 +70,16 @@ footer a{color:#fff}
 <div class="hero">
 <svg viewBox="0 0 1440 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
 <circle cx="1180" cy="150" r="70" fill="#fff6c9" opacity=".95"/>
-<g fill="#fff" opacity=".9"><ellipse cx="260" cy="130" rx="90" ry="22"/><ellipse cx="320" cy="115" rx="60" ry="20"/><ellipse cx="820" cy="190" rx="100" ry="22"/><ellipse cx="880" cy="172" rx="60" ry="18"/></g>
+<g class="cloud" fill="#fff" opacity=".9"><ellipse cx="260" cy="130" rx="90" ry="22"/><ellipse cx="320" cy="115" rx="60" ry="20"/><ellipse cx="820" cy="190" rx="100" ry="22"/><ellipse cx="880" cy="172" rx="60" ry="18"/></g>
 <rect y="430" width="1440" height="270" fill="#3f9cc0"/>
-<path d="M0 470 Q90 445 180 470 T360 470 T540 470 T720 470 T900 470 T1080 470 T1260 470 T1440 470 V700H0Z" fill="#2b7fa3"/>
-<path d="M0 520 Q90 495 180 520 T360 520 T540 520 T720 520 T900 520 T1080 520 T1260 520 T1440 520 V700H0Z" fill="#256f92" opacity=".8"/>
+<g class="w1"><path d="M0 470 Q90 445 180 470 T360 470 T540 470 T720 470 T900 470 T1080 470 T1260 470 T1440 470 V700H0Z" fill="#2b7fa3"/></g>
+<g class="w2"><path d="M0 520 Q90 495 180 520 T360 520 T540 520 T720 520 T900 520 T1080 520 T1260 520 T1440 520 V700H0Z" fill="#256f92" opacity=".8"/></g>
 <path d="M0 590 Q200 540 420 590 T860 600 T1440 570 V700H0Z" fill="#f2dda6"/>
 <path d="M0 640 Q300 610 640 645 T1440 630 V700H0Z" fill="#e8cf98"/>
 <g transform="translate(360 350)"><rect x="0" y="60" width="240" height="150" fill="#fff"/><path d="M-20 62 L120 -30 L260 62Z" fill="#c9503f"/><rect x="45" y="105" width="50" height="105" fill="#2b7fa3"/><rect x="130" y="95" width="70" height="55" fill="#bfe4f2" stroke="#155a7a" stroke-width="4"/><rect x="100" y="-4" width="40" height="34" fill="#fff" stroke="#155a7a" stroke-width="3"/><path d="M0 205h240" stroke="#155a7a" stroke-width="4"/></g>
-<g transform="translate(1000 500)"><path d="M0 40 Q60 90 130 40Z" fill="#ef6f5e"/><path d="M65 40V-40L110 30Z" fill="#fff"/><path d="M65 40V-30L25 30Z" fill="#f6e7c1"/></g>
+<g class="boat" style="transform:translate(1000px,500px)"><path d="M0 40 Q60 90 130 40Z" fill="#ef6f5e"/><path d="M65 40V-40L110 30Z" fill="#fff"/><path d="M65 40V-30L25 30Z" fill="#f6e7c1"/></g>
 </svg>
+<img class="ph" src="https://images.unsplash.com/photo-1510069551606-f9ec0a62fe28?auto=format&fit=crop&q=75&w=1800" alt="White house beside the sea"  onerror="this.remove()"><div class="ov"></div>
 <div class="txt"><h1>The Old Lifeboat House</h1><p>Sleeps 6 &middot; Dog friendly &middot; Steps from the beach</p><a class="btn" href="#book">Check availability</a></div>
 </div>
 <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#e8cf98"><path d="M0 30 Q90 0 180 30 T360 30 T540 30 T720 30 T900 30 T1080 30 T1260 30 T1440 30 V60H0Z" fill="#eef8fb"/></svg>
@@ -82,17 +93,18 @@ footer a{color:#fff}
 <div class="quote"></div><p class="legend">Struck-through dates are booked. Demo data.</p></div>
 </div></section>
 
-<section class="sand"><div class="in"><h2>Everything for a proper seaside stay</h2>
-<div class="feat"><div><span>🐕</span><h3>Dog friendly</h3><p>Bowls, towels and a rinse-off tap for sandy paws.</p></div>
+<section class="sand"><div class="in"><h2 class="rv">Everything for a proper seaside stay</h2>
+<div class="feat"><div class="rv"><span>🐕</span><h3>Dog friendly</h3><p>Bowls, towels and a rinse-off tap for sandy paws.</p></div>
 <div><span>🔥</span><h3>Log burner</h3><p>Cosy evenings after a wild-weather walk.</p></div>
 <div><span>🏄</span><h3>Board store</h3><p>Secure store for surfboards and paddleboards.</p></div>
 <div><span>🍳</span><h3>Big kitchen</h3><p>Room for everyone, with a huge farmhouse table.</p></div></div></div></section>
 
 <section id="gallery"><div class="in"><h2>A peek inside</h2>
 <div class="gal">
-<svg viewBox="0 0 400 280"><rect width="400" height="280" fill="#bfe4f2"/><rect y="170" width="400" height="110" fill="#f2dda6"/><rect x="60" y="60" width="120" height="110" fill="#fff"/><rect x="220" y="90" width="120" height="80" fill="#ef6f5e"/><text x="200" y="250" text-anchor="middle" font-family="Nunito" font-size="16" fill="#155a7a">Sunny lounge</text></svg>
-<svg viewBox="0 0 400 280"><rect width="400" height="280" fill="#fdf1d8"/><rect x="40" y="110" width="320" height="90" rx="10" fill="#2b7fa3"/><rect x="60" y="90" width="120" height="40" rx="8" fill="#fff"/><rect x="220" y="90" width="120" height="40" rx="8" fill="#fff"/><text x="200" y="250" text-anchor="middle" font-family="Nunito" font-size="16" fill="#155a7a">Master bedroom</text></svg>
-<svg viewBox="0 0 400 280"><rect width="400" height="280" fill="#8fd0ea"/><rect y="150" width="400" height="130" fill="#3f9cc0"/><rect x="40" y="130" width="320" height="16" fill="#c9a66b"/><circle cx="330" cy="60" r="30" fill="#fff6c9"/><text x="200" y="250" text-anchor="middle" font-family="Nunito" font-size="16" fill="#fff">Sunset deck</text></svg>
+<figure class="tile rv"><svg viewBox="0 0 400 280"><rect width="400" height="280" fill="#bfe4f2"/><rect y="170" width="400" height="110" fill="#f2dda6"/><rect x="60" y="60" width="120" height="110" fill="#fff"/><rect x="220" y="90" width="120" height="80" fill="#ef6f5e"/></svg><img class="ph" src="https://images.unsplash.com/photo-1711145131270-af8729518404?auto=format&fit=crop&q=75&w=900" alt="Living room with a large window over the ocean" loading="lazy" onerror="this.remove()"><figcaption>Sunny lounge</figcaption></figure>
+<figure class="tile rv"><svg viewBox="0 0 400 280"><rect width="400" height="280" fill="#fdf1d8"/><rect x="40" y="110" width="320" height="90" rx="10" fill="#2b7fa3"/></svg><img class="ph" src="https://images.unsplash.com/photo-1770414173168-f6c666501225?auto=format&fit=crop&q=75&w=900" alt="Bright coastal bedroom" loading="lazy" onerror="this.remove()"><figcaption>Master bedroom</figcaption></figure>
+<figure class="tile rv"><svg viewBox="0 0 400 280"><rect width="400" height="280" fill="#8fd0ea"/><rect y="150" width="400" height="130" fill="#3f9cc0"/></svg><img class="ph" src="https://images.unsplash.com/photo-1721369483526-62f48a00b949?auto=format&fit=crop&q=75&w=900" alt="Bedroom with a view of the ocean" loading="lazy" onerror="this.remove()"><figcaption>Sea-view twin room</figcaption></figure>
+<figure class="tile rv"><svg viewBox="0 0 400 280"><rect width="400" height="280" fill="#f2dda6"/></svg><img class="ph" src="https://images.unsplash.com/photo-1569157603775-68708a56673d?auto=format&fit=crop&q=75&w=900" alt="Two Adirondack chairs on the beach" loading="lazy" onerror="this.remove()"><figcaption>Two minutes to the sand</figcaption></figure>
 </div></div></section>
 
 <section id="reviews" class="sand"><div class="in"><h2>Guests say</h2><span class="score">9.6 / 10</span> <small>Example score from the reviews platform we connect to</small>
@@ -103,6 +115,7 @@ footer a{color:#fff}
 
 <section id="policy"><div class="in"><h2>Our policies</h2><p>On a real site, this is where your reviews policy, booking terms, cancellation policy, privacy notice and house rules live, each on its own page, kept current for you.</p></div></section>
 
-<footer>The Old Lifeboat House is a fictional example created by <a href="../../">Stars &amp; Stiles</a> to show a seaside design.</footer>
+<footer>The Old Lifeboat House is a fictional example created by <a href="../../">Stars &amp; Stiles</a> to show a seaside design. Photos from <a href="https://unsplash.com">Unsplash</a>.</footer>
 <script src="../demo.js"></script>
+<script src="../fx.js"></script>
 </body></html>

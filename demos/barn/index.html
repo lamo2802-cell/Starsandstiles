@@ -33,6 +33,9 @@ header nav a.book:hover{background:var(--ink);color:#fff}
 .btn{background:var(--ink);color:#fff;padding:1rem 2rem;text-decoration:none;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
 .hero .art{background:var(--oat);position:relative;min-height:340px;overflow:hidden}
 .hero .art svg{position:absolute;inset:0;width:100%;height:100%}
+.hero .art .ph{animation:kb 26s ease-in-out infinite alternate}@keyframes kb{from{transform:scale(1)}to{transform:scale(1.07)}}
+.hero .txt>*{animation:up 1s cubic-bezier(.2,.7,.2,1) both}.hero .txt>*:nth-child(2){animation-delay:.12s}.hero .txt>*:nth-child(3){animation-delay:.24s}.hero .txt>*:nth-child(4){animation-delay:.36s}@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}.gal .tile{aspect-ratio:3/4;margin:0}.gal .tile:nth-child(2n){margin-top:2rem}@media(max-width:860px){.gal{grid-template-columns:1fr 1fr}}.gal .tile svg{height:100%}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .stats div{padding:2rem 1.5rem;border-right:1px solid var(--line);text-align:center}
 .stats b{font-family:'DM Serif Display',serif;font-size:2.4rem;font-weight:400;display:block}
@@ -63,7 +66,7 @@ footer{padding:2.5rem 5%;text-align:center;font-size:.85rem;color:var(--muted);b
 
 <div class="hero">
 <div class="txt"><small>The Cotswolds &middot; Gloucestershire</small><h1>Space for<br>everyone.</h1><p>A beautifully converted barn with room for ten, a table for twelve and a garden made for long weekends.</p><div class="cta"><a class="btn" href="#book">Check dates</a></div></div>
-<div class="art"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="500" fill="#c9a66b"/><rect x="60" y="150" width="280" height="260" fill="#f4f0e8"/><path d="M40 152 L200 50 L360 152Z" fill="#1f1d1a"/><rect x="90" y="200" width="70" height="210" fill="#1f1d1a"/><rect x="185" y="200" width="70" height="110" fill="#b5714a"/><rect x="275" y="200" width="45" height="110" fill="#b5714a"/><rect x="0" y="410" width="400" height="90" fill="#8c6a3e"/><g fill="#4d7a5a"><circle cx="40" cy="400" r="26"/><circle cx="362" cy="404" r="30"/></g></svg></div>
+<div class="art"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="500" fill="#c9a66b"/><rect x="60" y="150" width="280" height="260" fill="#f4f0e8"/><path d="M40 152 L200 50 L360 152Z" fill="#1f1d1a"/><rect x="90" y="200" width="70" height="210" fill="#1f1d1a"/><rect x="185" y="200" width="70" height="110" fill="#b5714a"/><rect x="275" y="200" width="45" height="110" fill="#b5714a"/><rect x="0" y="410" width="400" height="90" fill="#8c6a3e"/><g fill="#4d7a5a"><circle cx="40" cy="400" r="26"/><circle cx="362" cy="404" r="30"/></g></svg><img class="ph" src="https://images.unsplash.com/photo-1766854766161-86ca70a0f245?auto=format&fit=crop&q=75&w=1200" alt="Interior of an old barn with exposed beams" loading="lazy" onerror="this.remove()"></div>
 </div>
 <div class="stats"><div><b>10</b><span>Guests</span></div><div><b>5</b><span>Bedrooms</span></div><div><b>4</b><span>Bathrooms</span></div><div><b>2</b><span>Acres</span></div></div>
 
@@ -76,14 +79,23 @@ footer{padding:2.5rem 5%;text-align:center;font-size:.85rem;color:var(--muted);b
 <div class="quote"></div><p class="legend">Struck-through dates are booked. Demo data.</p></div>
 </div></section>
 
-<section id="events" class="dark"><div class="in grid"><div><p class="no">02 &mdash; Gatherings</p><h2>Made for milestones</h2><p style="color:#c8c1b0">Big birthdays, family reunions, hen weekends and quiet team retreats. The barn is set well back from neighbours and designed for groups.</p></div>
+<section style="padding-top:0"><div class="in"><p class="no rv">02 &mdash; Rooms</p><h2 class="rv">Beams, light and long tables</h2>
+<div class="gal">
+<figure class="tile rv"><svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#e9e2d2"/></svg><img class="ph" src="https://images.unsplash.com/photo-1783628500870-d5380cf2fa5e?auto=format&fit=crop&q=75&w=800" alt="Open-plan living, dining and kitchen" loading="lazy" onerror="this.remove()"><figcaption>Open-plan hall</figcaption></figure>
+<figure class="tile rv"><svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#d9c9a6"/></svg><img class="ph" src="https://images.unsplash.com/photo-1776950815445-f80f2b21fa50?auto=format&fit=crop&q=75&w=800" alt="Rustic wooden kitchen with bar and stools" loading="lazy" onerror="this.remove()"><figcaption>The kitchen</figcaption></figure>
+<figure class="tile rv"><svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#e9e2d2"/></svg><img class="ph" src="https://images.unsplash.com/photo-1766430956209-72d1c28a16ec?auto=format&fit=crop&q=75&w=800" alt="Cosy living room with loft and large window" loading="lazy" onerror="this.remove()"><figcaption>The snug</figcaption></figure>
+<figure class="tile rv"><svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#d9c9a6"/></svg><img class="ph" src="https://images.unsplash.com/photo-1784740226696-113c9054ffc3?auto=format&fit=crop&q=75&w=800" alt="Rustic lounge with wooden beams and large windows" loading="lazy" onerror="this.remove()"><figcaption>The lounge</figcaption></figure>
+</div></div></section>
+
+<section id="events" class="dark"><div class="in grid"><div><p class="no">03 &mdash; Gatherings</p><h2>Made for milestones</h2><p style="color:#c8c1b0">Big birthdays, family reunions, hen weekends and quiet team retreats. The barn is set well back from neighbours and designed for groups.</p></div>
 <ul><li>Chef and catering introductions</li><li>Early check-in and late check-out on request</li><li>Baby equipment and dog beds, on request</li><li>EV charger and ample parking</li></ul></div></section>
 
-<section><div class="in"><p class="no">03 &mdash; Guests</p><p class="big">“We had 22 people across the weekend and the barn absorbed every one of them. The kitchen alone was worth the trip.”<cite>Example guest review &middot; 9.5 / 10 example score</cite></p>
+<section><div class="in"><p class="no">04 &mdash; Guests</p><p class="big">“We had 22 people across the weekend and the barn absorbed every one of them. The kitchen alone was worth the trip.”<cite>Example guest review &middot; 9.5 / 10 example score</cite></p>
 <p class="policy-strip">How we collect and display reviews: see our <a href="#policy">reviews policy</a>.</p></div></section>
 
-<section id="policy" style="background:#ebe5d8"><div class="in"><p class="no">04 &mdash; Good to know</p><h2>Our policies</h2><p style="color:var(--muted);max-width:640px">On a real site, your reviews policy, group booking terms, cancellation policy, privacy notice and safety information each have their own page. With Compliance Watch, we keep them current as rules change.</p></div></section>
+<section id="policy" style="background:#ebe5d8"><div class="in"><p class="no">05 &mdash; Good to know</p><h2>Our policies</h2><p style="color:var(--muted);max-width:640px">On a real site, your reviews policy, group booking terms, cancellation policy, privacy notice and safety information each have their own page. With Compliance Watch, we keep them current as rules change.</p></div></section>
 
-<footer>Thorn Barn is a fictional example created by <a href="../../">Stars &amp; Stiles</a> to show a contemporary, editorial design.</footer>
+<footer>Thorn Barn is a fictional example created by <a href="../../">Stars &amp; Stiles</a> to show a contemporary, editorial design. Photos from <a href="https://unsplash.com">Unsplash</a>.</footer>
 <script src="../demo.js"></script>
+<script src="../fx.js"></script>
 </body></html>

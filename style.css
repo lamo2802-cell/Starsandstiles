@@ -104,3 +104,36 @@ footer.site h4{color:#fff;font-size:.8rem;letter-spacing:.14em;text-transform:up
 footer.site a{color:rgba(255,255,255,.7);text-decoration:none;display:block;padding:.15rem 0}
 footer.site a:hover{color:var(--gold)}
 footer.site .fine{border-top:1px solid rgba(255,255,255,.12);padding-top:1.4rem;line-height:1.7}
+
+/* ---------- logo ---------- */
+.logo{gap:.6rem}
+.logo b{font-weight:600}
+.logo .mark .moon{transform-origin:31px 15px;animation:moonGlow 5s ease-in-out infinite}
+@keyframes moonGlow{0%,100%{filter:drop-shadow(0 0 0 rgba(217,164,65,0))}50%{filter:drop-shadow(0 0 5px rgba(217,164,65,.9))}}
+
+/* ---------- hero animation ---------- */
+.hero::before{animation:twinkle 4.5s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(#fff 1.2px,transparent 1.8px),radial-gradient(#fff 1px,transparent 1.5px);background-size:210px 210px,140px 140px;background-position:40px 30px,100px 90px;opacity:.2;animation:twinkle 3.2s ease-in-out infinite alternate-reverse;pointer-events:none}
+@keyframes twinkle{from{opacity:.08}to{opacity:.45}}
+.hero .wrap>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero .wrap>*:nth-child(2){animation-delay:.12s}.hero .wrap>*:nth-child(3){animation-delay:.24s}.hero .wrap>*:nth-child(4){animation-delay:.36s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.shoot{position:absolute;top:14%;left:-10%;width:120px;height:2px;background:linear-gradient(90deg,transparent,#fff);transform:rotate(22deg);opacity:0;animation:shoot 9s linear infinite;z-index:1}
+.shoot.s2{top:38%;left:30%;animation-delay:5s;animation-duration:12s;width:90px}
+@keyframes shoot{0%{opacity:0;transform:translate(0,0) rotate(22deg)}3%{opacity:1}12%{opacity:0;transform:translate(520px,210px) rotate(22deg)}100%{opacity:0}}
+
+/* ---------- scroll reveal (added by motion.js) ---------- */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.card,.show,.btn{transition:transform .25s,box-shadow .25s,background .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(20,28,46,.12)}
+.icon{transition:transform .35s}.card:hover .icon{transform:rotate(-8deg) scale(1.1)}
+nav.site{transition:padding .25s,box-shadow .25s}
+nav.site.scrolled{box-shadow:0 4px 18px rgba(0,0,0,.25)}
+nav.site.scrolled .wrap{padding-top:.6rem;padding-bottom:.6rem}
+.step::before{transition:transform .4s}.step:hover::before{transform:scale(1.15) translateX(4px)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
