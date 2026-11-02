@@ -146,7 +146,7 @@ def page(fname, title, desc, body):
 
 
 # ---------- HOME ----------
-GATEPHOTO = "https://images.pexels.com/photos/9017967/pexels-photo-9017967.jpeg?auto=compress&cs=tinysrgb&w=1600"
+GATEPHOTO = "assets/cringley-413188738.jpg"
 WINDOWPHOTO = "https://images.pexels.com/photos/36246279/pexels-photo-36246279.jpeg?auto=compress&cs=tinysrgb&w=1400"
 
 def photo(url, fallback, alt, cls=""):
@@ -165,7 +165,7 @@ page("index.html", "Stars & Stiles | Direct booking websites for holiday let own
 <p>We can look after your site for you or hand it over once it&rsquo;s live. Your choice.</p>
 <a class="btn" href="#how">See how it works &nbsp;&rarr;</a>
 </div>
-<div class="hh-photo">{photo(GATEPHOTO, "assets/cringley-413188738.jpg", "A stone barn on a green hillside in the Yorkshire Dales")}
+<div class="hh-photo">{photo(GATEPHOTO, "assets/cringley-413188738.jpg", "Cringley Cottage, a stone cottage in the Yorkshire Dales")}
 {spark("s1")}{spark("s2")}{spark("s3")}</div>
 </div></section>
 
@@ -352,14 +352,14 @@ page("compliance.html", "Compliance Watch | Stars & Stiles",
 <p>Not every rule applies to every property, and requirements can differ across the UK. We&rsquo;ll help you understand what&rsquo;s relevant and where you might need to take action.</p></div>
 <div class="tablewrap"><table class="cmp">
 <tr><th>The topic</th><th>What we look out for</th><th>What it means for your website</th></tr>
-<tr><td>Consumer law &amp; reviews</td><td>Rules on fake or incentivised reviews and how reviews are presented</td><td>Reviews policy page, review display</td></tr>
-<tr><td>Pricing display</td><td>Rules on showing the full price up front, including mandatory fees</td><td>Quote and checkout pages</td></tr>
-<tr><td>Fire &amp; guest safety</td><td>Duties around fire risk, alarms and safety records for guests</td><td>Changeover checklists, guest info page</td></tr>
-<tr><td>Gas, electrical &amp; other safety</td><td>Certificate and inspection expectations</td><td>Owner reminders and records</td></tr>
-<tr><td>Registration &amp; licensing</td><td>National and local schemes for short-term lets</td><td>Registration details on your site where required</td></tr>
-<tr><td>Tax</td><td>Changes to how holiday let income is treated</td><td>Owner updates only, no site change</td></tr>
-<tr><td>Data &amp; privacy</td><td>Guest data, cookies and privacy notice expectations</td><td>Privacy notice, cookie banner</td></tr>
-<tr><td>Terms &amp; cancellations</td><td>Fair terms, refund and cancellation wording</td><td>Booking terms page</td></tr>
+<tr><td>Consumer law &amp; reviews</td><td>Rules around collecting, displaying and managing guest reviews</td><td>Reviews policy page, review display</td></tr>
+<tr><td>Pricing display</td><td>How prices and any additional charges must be shown</td><td>Quote and checkout pages</td></tr>
+<tr><td>Fire &amp; guest safety</td><td>Changes to fire safety, alarms and guest safety requirements</td><td>Changeover checklists, guest info page</td></tr>
+<tr><td>Gas, electrical &amp; other safety</td><td>Inspection, certification and safety record requirements</td><td>Owner reminders and records</td></tr>
+<tr><td>Registration &amp; licensing</td><td>National and local registration or licensing requirements</td><td>Registration details on your site where required</td></tr>
+<tr><td>Tax</td><td>Changes to tax rules affecting holiday let owners</td><td>Owner updates only, no site change</td></tr>
+<tr><td>Data &amp; privacy</td><td>Rules around guest information, cookies and privacy</td><td>Privacy notice, cookie banner</td></tr>
+<tr><td>Terms &amp; cancellations</td><td>Requirements around booking terms, refunds and cancellations</td><td>Booking terms page</td></tr>
 </table></div></div></section>
 
 <section class="block"><div class="wrap narrow">
