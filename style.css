@@ -208,3 +208,20 @@ header.topbar.scrolled{box-shadow:0 2px 14px rgba(31,47,38,.08)}
 }
 
 @media(max-width:1180px){.s-panel .botan{opacity:.18}}
+
+/* ---------- Ruth feedback round (Nov 2026) ---------- */
+.hh-sub{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.45rem;color:var(--forest);font-weight:500;margin-bottom:.9rem}
+.strip-head{padding-top:2.2rem;margin-bottom:0;color:var(--forest)}
+.steps.lz .step::before{content:counter(s,decimal-leading-zero)}
+section.block.sage{background:var(--sage-soft)}
+section.block.sage .card{background:var(--paper)}
+.card h3.incl{font-family:'Jost',sans-serif;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:400;color:var(--forest);margin-top:1.4rem}
+.card.price .amt{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.6rem;color:var(--forest);line-height:1.1;margin:.4rem 0 .8rem}
+.card.price .amt small{font-size:1.1rem;color:var(--muted)}
+.clarity .wrap{max-width:980px}
+.clarity h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+.clarity p{color:var(--muted);margin-bottom:.8rem;font-size:.98rem}
+a.textlink{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);text-decoration:none;border-bottom:1px solid currentColor}
+a.textlink:hover{color:var(--forest)}
+.hero p.lead+p.lead{margin-top:.8rem}
+.section-head p+p{margin-top:.8rem}

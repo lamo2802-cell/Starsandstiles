@@ -128,7 +128,7 @@ def nav(current):
 
 FOOT = f"""<footer class="site"><div class="wrap">
 <div class="cols">
-<div><h4>Stars &amp; Stiles</h4><p>Direct booking websites for UK holiday let owners, with regulation updates to help you stay on top of the rules.</p></div>
+<div><h4>Stars &amp; Stiles</h4><p>Beautiful, practical websites for holiday let owners. More direct bookings, less admin and more time for the things that matter.</p></div>
 <div><h4>Explore</h4><a href="services.html">What we do</a><a href="compliance.html">Compliance Watch</a><a href="showcase.html">Showcase &amp; demos</a><a href="contact.html">Contact</a></div>
 <div><h4>See it live</h4><a href="https://www.cringleycottage.com" target="_blank" rel="noopener">Cringley Cottage</a><a href="demos/seaside/">Example: The Old Lifeboat House</a><a href="demos/highland/">Example: Corrie Bothy</a><a href="demos/barn/">Example: Thorn Barn</a></div>
 <div><h4>Contact</h4><a href="disclaimer.html">Important information</a><a href="mailto:{EMAIL}">{EMAIL}</a><a href="tel:+447854075084">07854 075084</a></div>
@@ -157,17 +157,19 @@ page("index.html", "Stars & Stiles | Direct booking websites for holiday let own
      f"""
 <section class="home-hero"><div class="wrap">
 <div class="hh-text">
-<h1>Your holiday let.<br>Your own website.<br>Your bookings.</h1>
+<h1>Your holiday let.<br>Your bookings.<br>Your way.</h1>
 <span class="rule"></span>
-<p>We build direct booking websites for holiday let owners, so more guests book with you instead of paying a platform.</p>
-<p>We can look after your site for you, or hand it over once it&rsquo;s live. Your choice.</p>
+<p class="hh-sub">More direct bookings. Less admin. Fewer fees.</p>
+<p>We&rsquo;re holiday let owners too and we wanted all three. We couldn&rsquo;t find a simple, affordable way to do it &ndash; so we built one.</p>
+<p>Now we build them for other holiday let owners too. A finished website that lets you take and manage bookings directly, without any of the usual hassle.</p>
+<p>We can look after your site for you or hand it over once it&rsquo;s live. Your choice.</p>
 <a class="btn" href="#how">See how it works &nbsp;&rarr;</a>
 </div>
 <div class="hh-photo">{photo(GATEPHOTO, "assets/cringley-413188738.jpg", "A stone barn on a green hillside in the Yorkshire Dales")}
 {spark("s1")}{spark("s2")}{spark("s3")}</div>
 </div></section>
 
-<section class="strip"><div class="wrap"><div class="cells">
+<section class="strip"><div class="wrap"><p class="label center strip-head">What you get</p><div class="cells">
 <div><span class="i">{ico("house")}</span><h3>A site of your own</h3><p>Direct bookings on your own domain, beautifully designed.</p></div>
 <div><span class="i">{ico("calendar")}</span><h3>Calendars in sync</h3><p>Airbnb, Booking.com and other listing sites, no double bookings.</p></div>
 <div><span class="i">{ico("chat")}</span><h3>Guest communications</h3><p>Confirmations, reminders, check-in and check-out, sent for you.</p></div>
@@ -177,26 +179,29 @@ page("index.html", "Stars & Stiles | Direct booking websites for holiday let own
 <section class="story"><div class="s-photo">{photo(WINDOWPHOTO, "assets/cringley-living.jpg", "Stone walls and green fields beneath Whernside in the Yorkshire Dales")}</div>
 <div class="s-panel"><div class="s-in">
 <p class="label">Built by owners</p>
-<h2>We run a holiday let too.</h2>
+<h2>We&rsquo;re holiday let owners too.</h2>
 <span class="rule"></span>
-<p>Stars &amp; Stiles is the company behind <strong>Cringley Cottage</strong>, our own dog-friendly holiday let in Askrigg in the Yorkshire Dales. Its website takes direct bookings, syncs with Airbnb and Booking.com, and runs day to day for us.</p>
-<p>When the rules changed on consumer reviews, we made the update to our own site first. Compliance Watch is that same routine, offered to other owners.</p>
+<p>Stars &amp; Stiles started with our own holiday cottage, <strong>Cringley Cottage</strong>, in the Yorkshire Dales.</p>
+<p>Like most owners, we wanted more direct bookings and less reliance on third-party platforms and their fees. However, we also knew that taking bookings ourselves meant more admin, more things to keep on top of and more time spent managing the business alongside our full-time jobs and young family.</p>
+<p>So, we built the solution we wanted for ourselves.</p>
+<p>A website that takes bookings and payments, keeps calendars in sync and makes running our holiday let simpler in so many other ways. It works for us every day, and now we build the same solution for other owners.</p>
+<p>No complicated tech, no starting from scratch, just a straightforward way to take more control of your bookings, leaving you more time for the things that matter most.</p>
 <a class="btn" href="https://www.cringleycottage.com" target="_blank" rel="noopener">Visit Cringley Cottage &nbsp;&rarr;</a>
-</div>{botanical()}{spark("s4")}{spark("s5")}</div></section>
+</div>{spark("s4")}{spark("s5")}</div></section>
 
 <section class="band"><div class="wrap"><div class="band-in">
-<div class="b-text"><p class="label center">A simpler way to run your holiday let</p>
-<h2 class="center">More time for what you love.</h2>
+<div class="b-text"><p class="label center">Why Stars and Stiles?</p>
+<h2 class="center">Because we needed this too.</h2>
 <div class="cells four">
-<div><span class="i">{ico("coin")}</span><h3>No commission</h3><p>Direct bookings carry no booking commission. You keep what your guests pay, less only the card processing fee charged by the payment provider.</p></div>
-<div><span class="i">{ico("heart")}</span><h3>Happier guests</h3><p>A seamless journey, from booking to check-out.</p></div>
+<div><span class="i">{ico("coin")}</span><h3>No commission</h3><p>Direct bookings carry no booking commission, just the usual card processing fee.</p></div>
+<div><span class="i">{ico("heart")}</span><h3>Happier guests</h3><p>A simple, seamless experience from booking to check-out.</p></div>
 <div><span class="i">{ico("sliders")}</span><h3>Greater control</h3><p>Your prices, policies and guest relationships, all in one place.</p></div>
-<div><span class="i">{ico("mug")}</span><h3>More freedom</h3><p>We manage it, or hand it over. Either way, more time for you.</p></div>
+<div><span class="i">{ico("mug")}</span><h3>More free time</h3><p>Bookings, emails, guest info, reviews and stay information &ndash; all those little jobs that add up, taken care of so running your holiday let takes less of your time.</p></div>
 </div></div>
 <div class="b-photo"><img src="assets/cringley-garden.jpg" alt="Garden table at Cringley Cottage" loading="lazy"></div>
 </div></div></section>
 
-<section class="block" id="what"><div class="wrap">
+<section class="block alt" id="what"><div class="wrap">
 <div class="section-head center"><p class="label">The core service</p>
 <h2>A complete booking website, built around your property</h2>
 <span class="rule"></span>
@@ -218,35 +223,37 @@ page("index.html", "Stars & Stiles | Direct booking websites for holiday let own
 <p class="center" style="margin-top:2.2rem"><a class="btn ghost-dark" href="services.html">Everything we do &nbsp;&rarr;</a></p>
 </div></section>
 
-<section class="block dark"><div class="wrap">
-<div class="section-head center"><p class="label">Optional extra</p>
-<h2>Compliance Watch: rules change, we keep you posted</h2>
+<section class="block sage"><div class="wrap">
+<div class="section-head center"><p class="label">One less thing to worry about</p>
+<h2>Compliance Watch</h2>
 <span class="rule"></span>
-<p>Running a holiday let now means keeping up with consumer law, safety duties, registration schemes and tax changes. Compliance Watch is an add-on where we track changes that affect holiday lets, send you plain-English updates, and where a change touches your website, we make the update for you.</p></div>
+<p>There&rsquo;s enough to keep on top of when you run a holiday let without having to keep checking what&rsquo;s changed.</p>
+<p>With Compliance Watch, we keep an eye on the rules and requirements that affect holiday let owners and explain everything you need to know in plain English. Where it affects your website, we can even make the changes for you.</p>
+<p><strong>One less thing on your list, from &pound;9.99 a month.</strong></p></div>
 <div class="grid g3">
 <div class="card"><h3>Updates in plain English</h3><p>What changed, who it affects and what owners commonly need to think about, with links to the official source.</p></div>
 <div class="card"><h3>Website changes done for you</h3><p>When a rule affects your site, such as publishing a reviews policy or how prices are displayed, we can implement it for you.</p></div>
 <div class="card"><h3>Owner tools</h3><p>Things like guest-safety changeover checklists, kept as a dated record you can show if you are ever asked.</p></div>
 </div>
-<p class="center" style="margin-top:2.2rem"><a class="btn light" href="compliance.html">How Compliance Watch works &nbsp;&rarr;</a></p>
+<p class="center" style="margin-top:2.2rem"><a class="btn ghost-dark" href="compliance.html">How Compliance Watch works &nbsp;&rarr;</a></p>
 </div></section>
 
 <section class="block" id="how"><div class="wrap">
 <div class="section-head center"><p class="label">How it works</p><h2>Four simple steps</h2><span class="rule"></span></div>
-<div class="steps">
-<div class="step"><h3>Chat</h3><p>Tell us about your property, your current listings and how you want to run bookings.</p></div>
-<div class="step"><h3>Design</h3><p>We build a site around your photos and personality. See our examples for the range of styles.</p></div>
-<div class="step"><h3>Connect</h3><p>We link your calendars, payments and emails, and test the whole booking journey.</p></div>
-<div class="step"><h3>Launch &amp; hand over</h3><p>Your site goes live on your own domain. Then you choose: we keep managing it, or we hand it over to you.</p></div>
+<div class="steps lz">
+<div class="step"><h3>Let&rsquo;s chat</h3><p>Tell us about your holiday let, what makes it special and how you&rsquo;d like things to work. We&rsquo;ll take it from there.</p></div>
+<div class="step"><h3>We get creative</h3><p>We&rsquo;ll build a beautiful website around your property, your photos and your personality. No two holiday lets are the same, and their websites shouldn&rsquo;t be either.</p></div>
+<div class="step"><h3>We make it work</h3><p>From bookings and payments to calendars, guest emails and all the little details, we&rsquo;ll get everything connected, set up and tested.</p></div>
+<div class="step"><h3>You&rsquo;re up and running</h3><p>Your new website goes live, ready to welcome guests. We&rsquo;ll happily look after it for you, or hand over the reins. It&rsquo;s entirely up to you.</p></div>
 </div></div></section>
 
 <section class="block alt"><div class="wrap">
 <div class="section-head center"><p class="label">Our work</p><h2>Every property is different</h2><span class="rule"></span>
 <p>Each site is unique to its property, with its own look, feel and personality.</p></div>
 <div class="showcase">
-<a class="show" href="demos/seaside/"><div class="thumb" style="background:linear-gradient(180deg,#bfe4f2 0,#eaf6fa 55%,#f4dfb4 55%,#e8cf98 75%,#3f9cc0 75%,#2b7fa3 100%)"><img src="https://images.unsplash.com/photo-1510069551606-f9ec0a62fe28?auto=format&fit=crop&q=75&w=900" alt="White house beside the sea" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>The Old Lifeboat House</h3><p>Coastal, bright and airy.</p><span class="more">View example &rarr;</span></div></a>
-<a class="show" href="demos/highland/"><div class="thumb" style="background:linear-gradient(180deg,#0e1420 0,#26324a 55%,#3a3020 55%,#1a1712 100%)"><img src="https://images.unsplash.com/photo-1773057679427-3aa69c2369e2?auto=format&fit=crop&q=75&w=900" alt="Small white house in a misty Scottish glen" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Corrie Bothy</h3><p>Dark, moody and atmospheric.</p><span class="more">View example &rarr;</span></div></a>
-<a class="show" href="demos/barn/"><div class="thumb" style="background:linear-gradient(180deg,#12372a 0,#12372a 60%,#f2b632 60%,#f2b632 100%)"><img src="https://images.unsplash.com/photo-1766854766161-86ca70a0f245?auto=format&fit=crop&q=75&w=900" alt="Barn interior with exposed beams" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Thorn Barn</h3><p>Clean, contemporary and editorial.</p><span class="more">View example &rarr;</span></div></a>
+<a class="show" href="demos/seaside/"><div class="thumb" style="background:linear-gradient(180deg,#bfe4f2 0,#eaf6fa 55%,#f4dfb4 55%,#e8cf98 75%,#3f9cc0 75%,#2b7fa3 100%)"><img src="https://images.unsplash.com/photo-1510069551606-f9ec0a62fe28?auto=format&fit=crop&q=75&w=900" alt="White house beside the sea" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>The Old Lifeboat House</h3><p>Light, bright and coastal. A relaxed seaside escape with a fresh, airy feel.</p><span class="more">View demo design &rarr;</span></div></a>
+<a class="show" href="demos/highland/"><div class="thumb" style="background:linear-gradient(180deg,#0e1420 0,#26324a 55%,#3a3020 55%,#1a1712 100%)"><img src="https://images.unsplash.com/photo-1773057679427-3aa69c2369e2?auto=format&fit=crop&q=75&w=900" alt="Small white house in a misty Scottish glen" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Corrie Bothy</h3><p>Cosy, atmospheric and full of character. A Highland hideaway with a more dramatic look.</p><span class="more">View demo design &rarr;</span></div></a>
+<a class="show" href="demos/barn/"><div class="thumb" style="background:linear-gradient(180deg,#12372a 0,#12372a 60%,#f2b632 60%,#f2b632 100%)"><img src="https://images.unsplash.com/photo-1766854766161-86ca70a0f245?auto=format&fit=crop&q=75&w=900" alt="Barn interior with exposed beams" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Thorn Barn</h3><p>Contemporary, understated and stylish. A modern take on a countryside retreat.</p><span class="more">View demo design &rarr;</span></div></a>
 </div>
 <p class="center" style="margin-top:2.2rem"><a class="btn ghost-dark" href="showcase.html">See all examples &nbsp;&rarr;</a></p>
 </div></section>
@@ -263,31 +270,34 @@ page("services.html", "What we do | Stars & Stiles",
      """
 <header class="hero" style="padding:4.5rem 0 3.5rem"><div class="wrap">
 <p class="eyebrow">What we do</p><h1>Two services, one goal</h1>
-<p class="lead">Get you more direct bookings, and help you keep up with the rules of running a holiday let.</p></div></header>
+<p class="lead">Helping holiday let owners take more control, keep more of their booking income and spend less time on the day-to-day.</p></div></header>
 
 <section class="block"><div class="wrap">
 <div class="grid g2">
-<div class="card"><span class="tag">Core service</span><h2 style="font-size:1.8rem">Direct Booking Site</h2>
-<p>We design and build your holiday let website, then either manage it for you or hand it over.</p>
+<div class="card"><span class="tag">Core service</span><h2 style="font-size:1.8rem">Your very own booking website</h2>
+<p>A beautiful, fully functioning website built around your holiday let. Take bookings directly, keep more of what your guests pay and let the clever bits take care of the admin.</p>
+<h3 class="incl">What&rsquo;s included</h3>
 <ul class="ticks">
-<li>Bespoke design around your property and brand</li>
-<li>Availability calendar that syncs with Airbnb, Booking.com and other listing sites</li>
-<li>Instant quotes with seasonal and minimum-stay pricing</li>
-<li>Secure payments with deposits and balance collection</li>
-<li>Automated guest communications: booking confirmation, payment reminders and receipts, check-in details before arrival, check-out reminders on departure day</li>
-<li>Owner admin area for prices and bookings</li>
-<li>Guest info page, house guide and terms</li>
-<li>Your own domain, set up in your name</li>
-<li>Hosting, security updates and support, if you choose us to manage it</li></ul></div>
-<div class="card"><span class="tag green">Optional add-on</span><h2 style="font-size:1.8rem">Compliance Watch</h2>
-<p>Regulation updates and website changes to go with them.</p>
+<li>A beautiful, bespoke website that reflects your property and its personality</li>
+<li>Availability calendar that syncs with Airbnb, Booking.com and other compatible platforms</li>
+<li>Instant quotes with flexible seasonal pricing and minimum stays</li>
+<li>Secure online payments, including deposits and balance collection</li>
+<li>Automated guest emails, from booking confirmations and payment reminders to arrival information and check-out</li>
+<li>Your own space to manage bookings, prices and availability</li>
+<li>Guest information, house guides and all those useful little details in one place</li>
+<li>Your own domain name, registered in your name</li>
+<li>The choice to manage your website yourself or leave the hosting, updates and support to us</li></ul></div>
+<div class="card"><span class="tag green">Optional extra</span><h2 style="font-size:1.8rem">Compliance Watch</h2>
+<p>Keeping up with changing rules and regulations probably isn&rsquo;t your favourite part of running a holiday let. That&rsquo;s where we come in.</p>
+<p>From &pound;9.99 a month, we&rsquo;ll help you stay one step ahead.</p>
 <ul class="ticks">
-<li>Plain-English updates when rules affecting holiday lets change</li>
-<li>Links to the official source for every update</li>
-<li>Website changes made for you where a rule touches the site</li>
-<li>Reviews policy, price display and guest information pages kept current</li>
-<li>Optional safety changeover checklists with dated records</li>
-<li>A simple owner checklist of the areas worth reviewing</li></ul>
+<li>Clear, plain-English updates when relevant rules and regulations change</li>
+<li>Links to official guidance, so you know where the information comes from</li>
+<li>Website updates taken care of when changes affect your site</li>
+<li>Help keeping your reviews policy, pricing information and guest pages up to date</li>
+<li>Optional safety and changeover checklists to help you stay organised</li>
+<li>A straightforward owner checklist highlighting things worth reviewing</li></ul>
+<p style="margin-top:1.2rem">Less time researching the rules. More peace of mind.</p>
 <p style="margin-top:1.2rem"><a href="compliance.html"><strong>More about Compliance Watch &rarr;</strong></a></p></div>
 </div></div></section>
 
@@ -302,48 +312,46 @@ page("services.html", "What we do | Stars & Stiles",
 </div></div></section>
 
 <section class="block"><div class="wrap">
-<div class="section-head"><h2>At a glance</h2></div>
-<div class="tablewrap"><table class="cmp">
-<tr><th></th><th>Direct Booking Site</th><th>+ Compliance Watch</th></tr>
-<tr><td>Website design &amp; build</td><td>Included</td><td>Included</td></tr>
-<tr><td>Ongoing management</td><td>Your choice: we manage it, or we hand it over</td><td>Works with either option</td></tr>
-<tr><td>Booking, payments &amp; automated guest communications (check-in and check-out emails and more)</td><td>Included</td><td>Included</td></tr>
-<tr><td>Calendar sync with Airbnb, Booking.com &amp; other listing sites</td><td>Included</td><td>Included</td></tr>
-<tr><td>Regulation updates by email</td><td>&ndash;</td><td>Included</td></tr>
-<tr><td>Rule-driven website updates</td><td>Quoted as needed</td><td>Included where the change affects your site (if we manage it, or by arrangement if you run it)</td></tr>
-<tr><td>Owner compliance checklist</td><td>&ndash;</td><td>Included</td></tr>
-</table></div>
-<p style="margin-top:1.2rem;color:var(--muted);font-size:.93rem">Pricing depends on your property and how you want to run it, so we quote for each owner. Get in touch and we will give you a clear figure with no surprises.</p>
+<div class="section-head"><p class="label">Straightforward pricing</p><h2>A little investment. A lot less hassle.</h2>
+<span class="rule"></span>
+<p>We know how quickly the costs of running a holiday let add up. That&rsquo;s why we&rsquo;ve kept our pricing simple and affordable, without compromising on the things that matter.</p></div>
+<div class="grid g2">
+<div class="card price"><h3>Your own booking website</h3><p class="amt">&pound;600</p>
+<p>A beautiful, fully functioning website built around your property, with everything set up and ready to welcome guests. One upfront payment, and the website is yours.</p></div>
+<div class="card price"><span class="tag green">Optional extra</span><h3>Leave the website to us</h3><p class="amt">&pound;19.99<small>/month</small></p>
+<p>Prefer to leave the technical side to us? We&rsquo;ll keep your website secure and up to date, with ongoing support when you need it.</p></div>
+</div>
+<div class="notice" style="margin-top:1.8rem"><strong>A little note on running costs</strong><br>There may be some additional costs for things like your domain name, hosting, booking software and payment processing. These are paid separately to the relevant providers, and we&rsquo;ll explain exactly what&rsquo;s needed and the expected costs before you commit.</div>
+<p style="margin-top:2rem"><a class="btn" href="contact.html">Let&rsquo;s chat about your website &nbsp;&rarr;</a></p>
 </div></section>
-
-<section class="block"><div class="wrap narrow">
-<h2>What we don&rsquo;t do</h2>
-<p style="color:var(--muted);margin-bottom:1rem">To keep expectations clear: we are not solicitors, accountants or fire safety assessors. We do not give legal or tax advice, carry out risk assessments or inspections, or take on your legal responsibilities as owner. Compliance Watch helps you stay informed and keeps your website up to date. For advice on your own circumstances, you should always speak to a qualified professional.</p>
-<a class="btn dark" href="disclaimer.html">Read the full notice</a></div></section>
 """)
 
 # ---------- COMPLIANCE ----------
 page("compliance.html", "Compliance Watch | Stars & Stiles",
      "Regulation updates for UK holiday let owners, plus website changes made for you when the rules affect your site.",
-     """
+     f"""
 <header class="hero" style="padding:4.5rem 0 3.5rem"><div class="wrap">
 <p class="eyebrow">Optional add-on</p><h1>Compliance Watch</h1>
-<p class="lead">The rules for holiday lets keep moving. We watch for changes, tell you what they mean in plain English, and update your website where it is affected.</p></div></header>
+<p class="lead">The rules around holiday lets are always changing, and keeping up with them is another job on an already long list.</p>
+<p class="lead">With Compliance Watch, we keep an eye on what&rsquo;s changing, explain what you need to know in plain English and take care of any relevant updates to your website.</p>
+<p class="lead">One less thing for you to worry about.</p>
+<p class="lead"><strong>Just &pound;9.99 per month. Cancel anytime.</strong></p></div></header>
 
 <section class="block"><div class="wrap">
 <div class="section-head"><h2>How it works</h2></div>
 <div class="steps">
-<div class="step"><h3>We watch</h3><p>We follow official sources and trade bodies for changes that affect UK holiday lets.</p></div>
-<div class="step"><h3>We tell you</h3><p>You get a short update: what changed, who it affects, and where to read the official detail.</p></div>
-<div class="step"><h3>We update your site</h3><p>Where a change touches your website, we make the changes for you, such as a new policy page or how prices are shown.</p></div>
-<div class="step"><h3>You decide</h3><p>The action is always yours. For your own circumstances, a qualified adviser is the right person to ask.</p></div>
+<div class="step"><h3>We watch</h3><p>We keep an eye on official sources and industry updates for changes that could affect your holiday let.</p></div>
+<div class="step"><h3>We keep you posted</h3><p>When something changes, we&rsquo;ll explain what it means in plain English, with links to the official guidance.</p></div>
+<div class="step"><h3>We update your website</h3><p>If a change affects your website, we&rsquo;ll make the relevant updates for you, from policies to pricing information.</p></div>
+<div class="step"><h3>You&rsquo;re in control</h3><p>We&rsquo;ll highlight anything you may need to look into, so you can decide what action to take or when to seek professional advice.</p></div>
 </div></div></section>
 
 <section class="block alt"><div class="wrap">
 <div class="section-head"><h2>Areas we keep an eye on</h2>
-<p>These are the kinds of topics we follow. Which ones apply to you depends on your property and where it is, and some differ between England, Wales, Scotland and Northern Ireland.</p></div>
+<p>There&rsquo;s quite a lot to keep on top of when you own a holiday let. From guest safety and reviews to pricing rules and local licensing, we keep an eye on the changes that could affect you.</p>
+<p>Not every rule applies to every property, and requirements can differ across the UK. We&rsquo;ll help you understand what&rsquo;s relevant and where you might need to take action.</p></div>
 <div class="tablewrap"><table class="cmp">
-<tr><th>Area</th><th>What we track</th><th>Where it can show up on your site</th></tr>
+<tr><th>The topic</th><th>What we look out for</th><th>What it means for your website</th></tr>
 <tr><td>Consumer law &amp; reviews</td><td>Rules on fake or incentivised reviews and how reviews are presented</td><td>Reviews policy page, review display</td></tr>
 <tr><td>Pricing display</td><td>Rules on showing the full price up front, including mandatory fees</td><td>Quote and checkout pages</td></tr>
 <tr><td>Fire &amp; guest safety</td><td>Duties around fire risk, alarms and safety records for guests</td><td>Changeover checklists, guest info page</td></tr>
@@ -357,17 +365,23 @@ page("compliance.html", "Compliance Watch | Stars & Stiles",
 <section class="block"><div class="wrap narrow">
 <div class="section-head"><h2>A real example</h2></div>
 <div class="timeline">
-<div class="tl"><time>1 &middot; The rules change</time><h3>Fake reviews are banned</h3><p>New consumer law and regulator guidance made it clear that businesses should be open about how they collect and show reviews.</p></div>
-<div class="tl"><time>2 &middot; We tell owners</time><h3>A short, plain update</h3><p>What changed, what it means for a holiday let taking direct bookings, and a link to the official guidance.</p></div>
-<div class="tl"><time>3 &middot; We update the site</time><h3>A reviews policy page</h3><p>On our own Cringley Cottage site, we published a reviews policy and linked it beside the guest reviews. With Compliance Watch, we do the same on yours.</p></div>
+<div class="tl"><time>1 &middot; The rules change</time><h3>New rules around guest reviews</h3><p>When the rules around fake and misleading reviews changed, businesses needed to be clearer about how they collect, check and display customer reviews.</p></div>
+<div class="tl"><time>2 &middot; We keep you posted</time><h3>The important bits, in plain English</h3><p>We explain what&rsquo;s changed, why it matters for holiday let owners and anything you might need to do, with a link to the official guidance.</p></div>
+<div class="tl"><time>3 &middot; We update your website</time><h3>We&rsquo;ve already done it on ours</h3><p>We added a clear reviews policy to our own Cringley Cottage website, explaining how we collect and display guest reviews. With Compliance Watch, we&rsquo;d take care of the same update on your website.</p></div>
 </div>
-<p style="margin-top:2rem"><a class="btn dark" href="https://www.cringleycottage.com/reviews-policy.html" target="_blank" rel="noopener">See it on Cringley Cottage</a></p>
+<p style="margin-top:2rem"><a class="btn dark" href="https://www.cringleycottage.com/reviews-policy.html" target="_blank" rel="noopener">See it on Cringley Cottage &nbsp;&rarr;</a></p>
 </div></section>
 
-<section class="block dark"><div class="wrap narrow">
-<h2>Clear about what this is</h2>
-<p style="margin-bottom:1rem">Compliance Watch is an information and website-maintenance service. It is general guidance, not legal, tax or professional advice, and we do not guarantee that following it will meet every legal requirement that applies to you. Rules change and vary by location, so please check official sources or take professional advice for your own situation.</p>
-<a class="btn" href="disclaimer.html">Full notice</a> <a class="btn ghost" href="contact.html">Ask us a question</a></div></section>
+<section class="block alt clarity"><div class="wrap">
+<h2>A little clarity, for peace of mind.</h2>
+<p>We&rsquo;re here to help you keep on top of changing rules and requirements, without adding another job to your list.</p>
+<p>Compliance Watch provides helpful updates and website maintenance, rather than legal, tax or professional safety advice. Every holiday let is different, and it&rsquo;s still important to check what applies to your property and seek qualified advice when needed.</p>
+<a class="textlink" href="disclaimer.html">Read the full notice &rarr;</a></div></section>
+
+<section class="block cta-block"><div class="wrap narrow center">
+{spark("s6")}<h2>One less thing to keep on top of</h2>
+<p>Let us keep an eye on the changes, so you can get on with running your holiday let.</p>
+<a class="btn" href="contact.html">Get started &nbsp;&rarr;</a></div></section>
 """)
 
 # ---------- SHOWCASE ----------
@@ -376,32 +390,36 @@ page("showcase.html", "Showcase | Stars & Stiles",
      """
 <header class="hero" style="padding:4.5rem 0 3.5rem"><div class="wrap">
 <p class="eyebrow">Showcase</p><h1>Every property is different</h1>
-<p class="lead">One live site we run ourselves, and more examples showing how the look and feel can change while the booking engine underneath stays reliable.</p></div></header>
+<p class="lead">Every holiday let has its own personality, and we think its website should too.</p>
+<p class="lead">From cosy countryside cottages to contemporary coastal escapes, we create websites that reflect what makes your property special, with all the clever booking and admin features working away behind the scenes.</p></div></header>
 
 <section class="block"><div class="wrap">
 <div class="section-head"><h2>Live site</h2></div>
 <a class="show wide" href="https://www.cringleycottage.com" target="_blank" rel="noopener">
 <div class="thumb" style="background-image:url(assets/cringley-IMG_1423.jpg)"><span class="live">Live</span></div>
 <div class="body"><h3>Cringley Cottage, Yorkshire Dales</h3>
-<p>Our own dog-friendly cottage in Askrigg. Direct bookings with deposits, Airbnb and Booking.com sync, guest emails, cleaner checklists and a reviews policy. This is the site everything else is based on.</p>
-<span class="more">Visit cringleycottage.com &rarr;</span></div></a>
+<p>Our very own dog-friendly cottage in the heart of the Yorkshire Dales, and where Stars &amp; Stiles began.</p>
+<p>Behind the scenes, our website takes direct bookings, manages payments, syncs calendars and handles guest communications and all those little day-to-day jobs.</p>
+<p>It&rsquo;s the system we use ourselves, and the one we&rsquo;ve built Stars &amp; Stiles around.</p>
+<span class="more">Visit Cringley Cottage &rarr;</span></div></a>
 </div></section>
 
 <section class="block alt"><div class="wrap">
-<div class="section-head"><h2>Other examples</h2>
-<p>Each site we build is unique to its property, with its own look, feel and personality. These examples show the range, from bright and coastal to dark and dramatic to clean and contemporary.</p></div>
+<div class="section-head"><h2>A little inspiration</h2>
+<p>No two properties are the same, and neither should their websites be.</p>
+<p>We&rsquo;ve put together a few different styles to show what&rsquo;s possible. These are demonstration websites, designed to give you a feel for how we can bring your own property to life.</p></div>
 <div class="showcase">
 <a class="show" href="demos/seaside/"><div class="thumb" style="background:linear-gradient(180deg,#bfe4f2 0,#eaf6fa 55%,#f4dfb4 55%,#e8cf98 75%,#3f9cc0 75%,#2b7fa3 100%)"><img src="https://images.unsplash.com/photo-1510069551606-f9ec0a62fe28?auto=format&fit=crop&q=75&w=900" alt="White house beside the sea" loading="lazy" onerror="this.remove()"><span class="live ex">Example</span></div>
-<div class="body"><h3>The Old Lifeboat House</h3><p>Coastal, bright and airy. A seaside cottage on the Cornish coast for families and dogs.</p><span class="more">View example &rarr;</span></div></a>
+<div class="body"><h3>The Old Lifeboat House</h3><p>Light, bright and coastal. A relaxed seaside escape with a fresh, airy feel.</p><span class="more">View demo design &rarr;</span></div></a>
 <a class="show" href="demos/highland/"><div class="thumb" style="background:linear-gradient(180deg,#0e1420 0,#26324a 55%,#3a3020 55%,#1a1712 100%)"><img src="https://images.unsplash.com/photo-1773057679427-3aa69c2369e2?auto=format&fit=crop&q=75&w=900" alt="Small white house in a misty Scottish glen" loading="lazy" onerror="this.remove()"><span class="live ex">Example</span></div>
-<div class="body"><h3>Corrie Bothy</h3><p>Dark, moody and atmospheric. A Highland hideaway for couples, with a hot tub and dark skies.</p><span class="more">View example &rarr;</span></div></a>
+<div class="body"><h3>Corrie Bothy</h3><p>Cosy, atmospheric and full of character. A Highland hideaway with a more dramatic look.</p><span class="more">View demo design &rarr;</span></div></a>
 <a class="show" href="demos/barn/"><div class="thumb" style="background:linear-gradient(180deg,#12372a 0,#12372a 60%,#f2b632 60%,#f2b632 100%)"><img src="https://images.unsplash.com/photo-1766854766161-86ca70a0f245?auto=format&fit=crop&q=75&w=900" alt="Barn interior with exposed beams" loading="lazy" onerror="this.remove()"><span class="live ex">Example</span></div>
-<div class="body"><h3>Thorn Barn</h3><p>Clean, contemporary and editorial. A converted barn in the Cotswolds for groups and celebrations.</p><span class="more">View example &rarr;</span></div></a>
+<div class="body"><h3>Thorn Barn</h3><p>Contemporary, understated and stylish. A modern take on a countryside retreat.</p><span class="more">View demo design &rarr;</span></div></a>
 </div></div></section>
 
 <section class="block"><div class="wrap narrow" style="text-align:center">
-<h2>Want a site like these?</h2>
-<p style="color:var(--muted);margin-bottom:1.6rem">Every design is built around your property, photos and guests.</p>
+<h2>Now, let&rsquo;s talk about yours&hellip;</h2>
+<p style="color:var(--muted);margin-bottom:1.6rem">Every great holiday let deserves a website that does it justice. Tell us a little about your property, and we&rsquo;ll take it from there.</p>
 <a class="btn" href="contact.html">Get in touch</a></div></section>
 """)
 
