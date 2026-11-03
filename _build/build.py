@@ -47,8 +47,9 @@ def _gate():
 GATE = _gate()
 
 def BRAND():
-    return ('<a class="brand" href="index.html">' + GATE + spark("b1") + spark("b2") +
-            '<span class="bn">STARS &amp; STILES</span><span class="bt">FOR HOLIDAY LET OWNERS</span></a>')
+    return ('<a class="brand" href="index.html">'
+            '<img class="logo" src="assets/logo.png" width="640" height="482" '
+            'alt="Stars &amp; Stiles, for holiday let owners"></a>')
 
 def ico(name):
     P = {
